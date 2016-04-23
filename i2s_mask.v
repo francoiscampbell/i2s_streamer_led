@@ -11,9 +11,7 @@ module i2s_mask (
 	output reg led_oe
 	);
 
-	
-	wire[11:0] bit_count;
-	reg bit_count_rst = 1;
+	reg[11:0] bit_count;
 	reg[11:0] first_bit_index;
 
 	reg reading_header = 1;
@@ -28,33 +26,36 @@ module i2s_mask (
 	assign led_clk = i2s_clk && led_clk_en;
 	assign led_data = i2s_data;
 
-	counter12 counter12(
-		.clk(i2s_clk),
-		.rst_n(bit_count_rst),
-		.q(bit_count));
-
 	integer i;
 
 	always @(posedge i2s_clk or negedge rst_n) begin : proc_stream
-		if (~rst_n)
-			bit_count_rst <= 0;
-		else if (reading_header) begin
-			bit_count_rst <= 1;
+		if (~rst_n) begin
+			bit_count <= 0;
+			
+			reading_header <= 1;
+			first_bit_index <= 0;
+
+			row_num <= 0;
+			header <= 0;
+
+			led_clk_en <= 0;
+			led_lat <= 0;
+			led_oe = 1;
+		end else if (reading_header) begin
+			bit_count <= bit_count + 1;
 			led_lat <= 0;
 			led_oe = 1;
 
 			if (bit_count == 15) begin 
 				reading_header <= 0;
-				bit_count_rst <= 0;
+				bit_count <= 0;
 				first_bit_index <= 4 * ((addr_y * (num_modules_x + 1) * 4) + addr_x);
-				row_num <= internal_row_num;
 			end else begin
-				for (i = 15; i > 0; i = i - 1) 
-					header[i] <= header[i - 1];
+				header <= header << 1;
 				header[0] <= i2s_data;
 			end
 		end else begin 
-			bit_count_rst <= 1;
+			bit_count <=  bit_count + 1;
 
 			for (i = 0; i < 4; i = i + 1) begin 
 				if (bit_count == first_bit_index + (i * (num_modules_x + 1) * 4))
@@ -64,9 +65,11 @@ module i2s_mask (
 			end
 
 			if (bit_count == 16 * (num_modules_x + 1) * (num_modules_y + 1))
-				bit_count_rst <= 0;	
+				bit_count <= 0;	
 				led_lat <= 1;
 				led_oe <= 0;
+
+				row_num <= internal_row_num;
 		end
 	end
 

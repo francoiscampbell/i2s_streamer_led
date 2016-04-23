@@ -7,50 +7,29 @@ module i2s_mask_tb ();
 	reg clk = 0;    // Clock
 	wire i2s_clk;
 	assign i2s_clk = clk & i2s_clk_en;
-	reg i2s_clk_en = 0;
+	reg i2s_clk_en = 0;	
 
-	reg[3:0] addr_x_1 = 4'b0000, addr_y_1 = 4'b0000;
-	reg[3:0] addr_x_2 = 4'b0001, addr_y_2 = 4'b0000;
-
-	wire[5:0] row_num_1;
-	wire led_data_1, led_clk_1, led_lat_1, led_oe_1;
-
-	wire[5:0] row_num_2;
-	wire led_data_2, led_clk_2, led_lat_2, led_oe_2;
-
-	i2s_mask i2s_mask_dev1(
-		.rst_n(rst_n),
-		.i2s_data(i2s_data),
-		.i2s_clk(i2s_clk),
-		.addr_x(addr_x_1),
-		.addr_y(addr_y_1),
-		.row_num(row_num_1),
-		.led_data(led_data_1),
-		.led_clk(led_clk_1),
-		.led_lat(led_lat_1),
-		.led_oe(led_oe_1)
-	);
-
-	i2s_mask i2s_mask_dev2(
-		.rst_n(rst_n),
-		.i2s_data(i2s_data),
-		.i2s_clk(i2s_clk),
-		.addr_x(addr_x_2),
-		.addr_y(addr_y_2),
-		.row_num(row_num_2),
-		.led_data(led_data_2),
-		.led_clk(led_clk_2),
-		.led_lat(led_lat_2),
-		.led_oe(led_oe_2)
-	);
+	parameter int_num_modules_x = 16;
+	parameter int_num_modules_y = 16;
+	parameter num_modules_total = int_num_modules_x * int_num_modules_y;
+	parameter num_rows = num_modules_total;
 
 	reg random;
-	reg[3:0] num_modules_x = 4'b0001, num_modules_y = 4'b0000;
+	reg[3:0] num_modules_x = int_num_modules_x - 1, num_modules_y = int_num_modules_y - 1;
 	reg[5:0] row_num_in = 6'b000000;
 	wire[15:0] header;
 	assign header = {num_modules_x, num_modules_y, 2'b00, row_num_in};
 
-	integer i;
+	integer i, current_row;
+
+	genvar x, y;
+	generate 
+		for (x = 0; x < int_num_modules_x; x = x + 1) begin
+			for (y = 0; y < int_num_modules_y; y = y + 1) begin
+    			i2s_mask node(rst_n,i2s_data,i2s_clk,x,y,,,,,);
+    		end
+		end 
+	endgenerate
 
 	always clk = #10 ~clk;
 
@@ -61,28 +40,22 @@ module i2s_mask_tb ();
 		#5 rst_n = 0;
 		#30 rst_n = 1; 
 		#10 i2s_clk_en = 1;
-		for (i = 15; i >= 0; i = i - 1) begin
-			i2s_data = header[i];
-			#20;
-		end
-		for (i = 31; i >= 0; i = i - 1) begin
-			i2s_data = $random;
-			#20;
-		end
 
-		row_num_in = row_num_in + 1;
+		//for (current_row = 0; current_row < num_rows; current_row = current_row + 1) begin 
+			for (i = 15; i >= 0; i = i - 1) begin
+				i2s_data = header[i];
+				#20;
+			end
+			for (i = (num_modules_total * 16) - 1; i >= 0; i = i - 1) begin
+				i2s_data = $random;
+				#20;
+			end
 
-		for (i = 15; i >= 0; i = i - 1) begin
-			i2s_data = header[i];
-			#20;
-		end
-		for (i = 31; i >= 0; i = i - 1) begin
-			i2s_data = $random;
-			#20;
-		end
-		#40 i2s_clk_en = 0;
-
-		$finish;
+			row_num_in = row_num_in + 1;
+			if (row_num_in == 8) row_num_in = 0;
+		//end
+		
+		#40 $finish;
 	end
 
 endmodule

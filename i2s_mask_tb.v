@@ -4,7 +4,7 @@ module i2s_mask_tb ();
 
 	reg clk = 0;    // Clock
 	reg rst_n = 1;
-	reg[3:0] addr_x = 4'b0001, addr_y = 4'b0001;
+	reg[3:0] addr_x = 4'b0000, addr_y = 4'b0000;
 	reg i2s_clk_en = 0;
 
 	wire[5:0] row_num;

@@ -13,6 +13,7 @@ module i2s_mask (
 
 	reg[11:0] bit_count;
 	reg[11:0] first_bit_index;
+	reg[11:0] total_data_bits;
 
 	reg reading_header = 1;
 	reg[15:0] header;
@@ -34,6 +35,7 @@ module i2s_mask (
 			
 			reading_header <= 1;
 			first_bit_index <= 0;
+			total_data_bits <= 0;
 
 			row_num <= 0;
 			header <= 0;
@@ -46,13 +48,14 @@ module i2s_mask (
 			led_lat <= 0;
 			led_oe = 1;
 
+			header <= header << 1;
+			header[0] <= i2s_data;
+
 			if (bit_count == 15) begin 
 				reading_header <= 0;
 				bit_count <= 0;
 				first_bit_index <= 4 * ((addr_y * (num_modules_x + 1) * 4) + addr_x);
-			end else begin
-				header <= header << 1;
-				header[0] <= i2s_data;
+				total_data_bits <= 16 * (num_modules_x + 1) * (num_modules_y + 1);
 			end
 		end else begin 
 			bit_count <=  bit_count + 1;
@@ -64,12 +67,16 @@ module i2s_mask (
 					led_clk_en <= 0;
 			end
 
-			if (bit_count == 16 * (num_modules_x + 1) * (num_modules_y + 1))
+			if (bit_count == total_data_bits) begin 
 				bit_count <= 0;	
+				header <= 0;
+				reading_header <= 1;
+
 				led_lat <= 1;
 				led_oe <= 0;
 
 				row_num <= internal_row_num;
+			end
 		end
 	end
 

@@ -1,0 +1,79 @@
+#Build: Synplify Pro J-2015.03L-SP1, Build 123R, Aug 18 2015
+#install: C:\Program Files\Lattice\diamond\3.6_x64\synpbase
+#OS: Windows 8 6.2
+#Hostname: FRANCOIS-PC
+
+#Implementation: impl1
+
+Synopsys HDL Compiler, version comp201503sp1p1, Build 117R, built Aug 18 2015
+@N|Running in 64-bit mode
+Copyright (C) 1994-2015 Synopsys, Inc. This software and the associated documentation are proprietary to Synopsys, Inc. This software may only be used in accordance with the terms and conditions of a written license agreement with Synopsys, Inc.  All other use, reproduction, or distribution of this software is strictly prohibited.
+
+Synopsys Verilog Compiler, version comp201503sp1p1, Build 117R, built Aug 18 2015
+@N|Running in 64-bit mode
+Copyright (C) 1994-2015 Synopsys, Inc. This software and the associated documentation are proprietary to Synopsys, Inc. This software may only be used in accordance with the terms and conditions of a written license agreement with Synopsys, Inc.  All other use, reproduction, or distribution of this software is strictly prohibited.
+
+@N:: Running Verilog Compiler in System Verilog mode
+@N:: Running Verilog Compiler in Multiple File Compilation Unit mode
+@I::"C:\Program Files\Lattice\diamond\3.6_x64\synpbase\lib\lucent\machxo2.v"
+@I::"C:\Program Files\Lattice\diamond\3.6_x64\synpbase\lib\lucent\pmi_def.v"
+@I::"C:\Program Files\Lattice\diamond\3.6_x64\synpbase\lib\vlog\hypermods.v"
+@I::"C:\Program Files\Lattice\diamond\3.6_x64\synpbase\lib\vlog\umr_capim.v"
+@I::"C:\Program Files\Lattice\diamond\3.6_x64\synpbase\lib\vlog\scemi_objects.v"
+@I::"C:\Program Files\Lattice\diamond\3.6_x64\synpbase\lib\vlog\scemi_pipes.svh"
+@I::"C:\Users\Francois Campbell\GoogleDrive\Electronics\LatticeDiamond\i2s_mask\i2s_mask.v"
+Verilog syntax check successful!
+Selecting top level module i2s_mask
+@N: CG364 :"C:\Users\Francois Campbell\GoogleDrive\Electronics\LatticeDiamond\i2s_mask\i2s_mask.v":1:7:1:14|Synthesizing module i2s_mask
+
+@W: CL169 :"C:\Users\Francois Campbell\GoogleDrive\Electronics\LatticeDiamond\i2s_mask\i2s_mask.v":72:1:72:6|Pruning register current_bit_index[11:0] 
+
+@W: CL169 :"C:\Users\Francois Campbell\GoogleDrive\Electronics\LatticeDiamond\i2s_mask\i2s_mask.v":72:1:72:6|Pruning register reading_header 
+
+@W: CL169 :"C:\Users\Francois Campbell\GoogleDrive\Electronics\LatticeDiamond\i2s_mask\i2s_mask.v":72:1:72:6|Pruning register first_bit_index[11:0] 
+
+@W: CL169 :"C:\Users\Francois Campbell\GoogleDrive\Electronics\LatticeDiamond\i2s_mask\i2s_mask.v":72:1:72:6|Pruning register last_bit_index[11:0] 
+
+@W: CL169 :"C:\Users\Francois Campbell\GoogleDrive\Electronics\LatticeDiamond\i2s_mask\i2s_mask.v":72:1:72:6|Pruning register header[15:0] 
+
+@W: CL169 :"C:\Users\Francois Campbell\GoogleDrive\Electronics\LatticeDiamond\i2s_mask\i2s_mask.v":30:1:30:6|Pruning register led_lat 
+
+@W: CL169 :"C:\Users\Francois Campbell\GoogleDrive\Electronics\LatticeDiamond\i2s_mask\i2s_mask.v":30:1:30:6|Pruning register led_lat_needed 
+
+@W: CL169 :"C:\Users\Francois Campbell\GoogleDrive\Electronics\LatticeDiamond\i2s_mask\i2s_mask.v":30:1:30:6|Pruning register led_clk_en 
+
+@W: CL169 :"C:\Users\Francois Campbell\GoogleDrive\Electronics\LatticeDiamond\i2s_mask\i2s_mask.v":30:1:30:6|Pruning register current_bit_index[11:0] 
+
+@W: CL169 :"C:\Users\Francois Campbell\GoogleDrive\Electronics\LatticeDiamond\i2s_mask\i2s_mask.v":30:1:30:6|Pruning register header[15:0] 
+
+@W: CL169 :"C:\Users\Francois Campbell\GoogleDrive\Electronics\LatticeDiamond\i2s_mask\i2s_mask.v":30:1:30:6|Pruning register num_modules_x[3:0] 
+
+@W: CL169 :"C:\Users\Francois Campbell\GoogleDrive\Electronics\LatticeDiamond\i2s_mask\i2s_mask.v":30:1:30:6|Pruning register num_modules_y[3:0] 
+
+@W: CL169 :"C:\Users\Francois Campbell\GoogleDrive\Electronics\LatticeDiamond\i2s_mask\i2s_mask.v":30:1:30:6|Pruning register reading_header 
+
+@W: CL169 :"C:\Users\Francois Campbell\GoogleDrive\Electronics\LatticeDiamond\i2s_mask\i2s_mask.v":30:1:30:6|Pruning register first_bit_index[11:0] 
+
+@W: CL169 :"C:\Users\Francois Campbell\GoogleDrive\Electronics\LatticeDiamond\i2s_mask\i2s_mask.v":30:1:30:6|Pruning register last_bit_index[11:0] 
+
+@W: CL169 :"C:\Users\Francois Campbell\GoogleDrive\Electronics\LatticeDiamond\i2s_mask\i2s_mask.v":30:1:30:6|Pruning register row_num[5:0] 
+
+@W: CL189 :"C:\Users\Francois Campbell\GoogleDrive\Electronics\LatticeDiamond\i2s_mask\i2s_mask.v":72:1:72:6|Register bit led_lat is always 0, optimizing ...
+@W: CL189 :"C:\Users\Francois Campbell\GoogleDrive\Electronics\LatticeDiamond\i2s_mask\i2s_mask.v":72:1:72:6|Register bit led_oe is always 1, optimizing ...
+@W: CL189 :"C:\Users\Francois Campbell\GoogleDrive\Electronics\LatticeDiamond\i2s_mask\i2s_mask.v":72:1:72:6|Register bit row_num[5] is always 0, optimizing ...
+@W: CL189 :"C:\Users\Francois Campbell\GoogleDrive\Electronics\LatticeDiamond\i2s_mask\i2s_mask.v":72:1:72:6|Register bit row_num[4] is always 0, optimizing ...
+@W: CL189 :"C:\Users\Francois Campbell\GoogleDrive\Electronics\LatticeDiamond\i2s_mask\i2s_mask.v":72:1:72:6|Register bit row_num[3] is always 0, optimizing ...
+@W: CL189 :"C:\Users\Francois Campbell\GoogleDrive\Electronics\LatticeDiamond\i2s_mask\i2s_mask.v":72:1:72:6|Register bit row_num[2] is always 0, optimizing ...
+@W: CL189 :"C:\Users\Francois Campbell\GoogleDrive\Electronics\LatticeDiamond\i2s_mask\i2s_mask.v":72:1:72:6|Register bit row_num[1] is always 0, optimizing ...
+@W: CL189 :"C:\Users\Francois Campbell\GoogleDrive\Electronics\LatticeDiamond\i2s_mask\i2s_mask.v":72:1:72:6|Register bit row_num[0] is always 0, optimizing ...
+@W: CL189 :"C:\Users\Francois Campbell\GoogleDrive\Electronics\LatticeDiamond\i2s_mask\i2s_mask.v":72:1:72:6|Register bit led_clk_en is always 0, optimizing ...
+@E: CL172 :"C:\Users\Francois Campbell\GoogleDrive\Electronics\LatticeDiamond\i2s_mask\i2s_mask.v":10:12:10:18|Only one always block can assign a given variable led_lat
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Sat Apr 23 16:25:27 2016
+
+###########################################################]
+@END
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Sat Apr 23 16:25:27 2016
+
+###########################################################]

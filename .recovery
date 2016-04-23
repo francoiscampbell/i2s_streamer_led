@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BaliProject version="3.2" title="i2s_mask" device="LCMXO2-7000HC-4TG144C" default_implementation="impl1">
+    <Options/>
+    <Implementation title="impl1" dir="impl1" description="impl1" synthesis="lse" default_strategy="Strategy1">
+        <Options def_top="i2s_mask"/>
+        <Source name="i2s_mask.v" type="Verilog" type_short="Verilog">
+            <Options top_module="i2s_mask"/>
+        </Source>
+        <Source name="i2s_mask_tb.v" type="Verilog" type_short="Verilog" syn_sim="SimOnly">
+            <Options/>
+        </Source>
+        <Source name="i2s_mask.lpf" type="Logic Preference" type_short="LPF">
+            <Options/>
+        </Source>
+    </Implementation>
+    <Strategy name="Strategy1" file="i2s_mask1.sty"/>
+</BaliProject>

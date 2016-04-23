@@ -1,0 +1,7 @@
+Selecting top level module i2s_mask
+@N: CG364 :"C:\Users\Francois Campbell\GoogleDrive\Electronics\LatticeDiamond\i2s_mask\i2s_mask.v":1:7:1:14|Synthesizing module i2s_mask
+
+@W: CG136 :"C:\Users\Francois Campbell\GoogleDrive\Electronics\LatticeDiamond\i2s_mask\i2s_mask.v":31:2:31:3|Edge and condition mismatch
+@W: CL271 :"C:\Users\Francois Campbell\GoogleDrive\Electronics\LatticeDiamond\i2s_mask\i2s_mask.v":30:1:30:6|Pruning bits 15 to 6 of header[15:0] -- not in use ...
+
+@E: CL123 :"C:\Users\Francois Campbell\GoogleDrive\Electronics\LatticeDiamond\i2s_mask\i2s_mask.v":30:1:30:6|Logic for header[5:0] does not match a standard flip-flop

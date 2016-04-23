@@ -23,10 +23,10 @@ module i2s_mask_tb ();
 	integer i, current_row;
 
 	genvar x, y;
-	generate 
-		for (x = 0; x < int_num_modules_x; x = x + 1) begin
-			for (y = 0; y < int_num_modules_y; y = y + 1) begin
-    			i2s_mask node(rst_n, i2s_data, i2s_clk, x[3:0], y[3:0] ,,,,,);
+	generate
+		for (x = 0; x < int_num_modules_x; x = x + 1) begin : nodes_x
+			for (y = 0; y < int_num_modules_y; y = y + 1) begin : nodes_y
+     			i2s_mask node(rst_n, i2s_data, i2s_clk, x[3:0], y[3:0],,,,,);
     		end
 		end 
 	endgenerate

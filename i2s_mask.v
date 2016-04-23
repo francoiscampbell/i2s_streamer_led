@@ -53,16 +53,16 @@ module i2s_mask (
 			current_bit_index <= current_bit_index + 1;
 			header <= {header[14:0], i2s_data};
 
-			if (current_bit_index == 4) num_modules_x <= header[3:0];
-
-			if (current_bit_index == 8) num_modules_y <= header[3:0];
-
-			if (current_bit_index == 15) begin 
-				reading_header <= 0;
-				current_bit_index <= 0;
-				first_bit_index <= 4 * ((addr_y * (num_modules_x + 1) * 4) + addr_x);
-				last_bit_index <= (16 * (num_modules_x + 1) * (num_modules_y + 1)) - 1;
-			end
+			case (current_bit_index)
+				4: num_modules_x <= header[3:0];
+				8: num_modules_y <= header[3:0];
+				15: begin 
+					reading_header <= 0;
+					current_bit_index <= 0;
+					first_bit_index <= 4 * ((addr_y * (num_modules_x + 1) * 4) + addr_x);
+					last_bit_index <= (16 * (num_modules_x + 1) * (num_modules_y + 1)) - 1;
+				end
+			endcase
 		end else begin 
 			current_bit_index <=  current_bit_index + 1;
 

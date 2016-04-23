@@ -9,8 +9,8 @@ module i2s_mask_tb ();
 	assign i2s_clk = clk & i2s_clk_en;
 	reg i2s_clk_en = 0;	
 
-	parameter int_num_modules_x = 16;
-	parameter int_num_modules_y = 16;
+	parameter int_num_modules_x = 4;
+	parameter int_num_modules_y = 4;
 	parameter num_modules_total = int_num_modules_x * int_num_modules_y;
 	parameter num_rows = num_modules_total;
 

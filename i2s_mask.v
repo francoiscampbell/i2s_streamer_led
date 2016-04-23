@@ -17,7 +17,7 @@ module i2s_mask (
 
 	reg reading_header = 1;
 	reg[15:0] header;
-	reg[3:0] num_modules_x, num_modules_y;
+	reg[3:0] num_modules_x = 0, num_modules_y = 0;
 
 	reg led_clk_en = 0;
 	assign led_clk = i2s_clk && led_clk_en;

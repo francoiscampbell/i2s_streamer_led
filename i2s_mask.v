@@ -28,7 +28,20 @@ module i2s_mask (
 	integer i;
 
 	always @(posedge i2s_clk or negedge rst_n) begin : proc_stream
-		if (reading_header) begin
+		if (rst_n) begin 
+			current_bit_index <= 0;
+		
+			reading_header <= 1;
+			first_bit_index <= 0;
+			last_bit_index <= 0;
+
+			row_num <= 0;
+			header <= 0;
+
+			led_clk_en <= 0;
+			led_lat <= 0;
+			led_oe = 1;
+		end else if (reading_header) begin
 			if (led_lat_needed) begin 
 				led_lat <= 1;
 				led_lat_needed <= 0;
@@ -67,20 +80,5 @@ module i2s_mask (
 				row_num <= header[5:0];
 			end
 		end
-	end
-
-	always @(negedge rst_n) begin : proc_rst_n
-		current_bit_index <= 0;
-		
-		reading_header <= 1;
-		first_bit_index <= 0;
-		last_bit_index <= 0;
-
-		row_num <= 0;
-		header <= 0;
-
-		led_clk_en <= 0;
-		led_lat <= 0;
-		led_oe = 1;
 	end
 endmodule

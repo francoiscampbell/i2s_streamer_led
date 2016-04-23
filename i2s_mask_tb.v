@@ -6,8 +6,8 @@ module i2s_mask_tb ();
 
 	reg clk = 0;    // Clock
 	wire i2s_clk;
-	assign i2s_clk = clk & i2s_clk_en;
 	reg i2s_clk_en = 0;	
+	assign i2s_clk = clk & i2s_clk_en;
 
 	parameter int_num_modules_x = 4;
 	parameter int_num_modules_y = 4;

@@ -46,7 +46,6 @@ module i2s_mask (
 		end else if (reading_header) begin
 			bit_count <= bit_count + 1;
 			led_lat <= 0;
-			led_oe = 1;
 
 			header <= header << 1;
 			header[0] <= i2s_data;

@@ -11,31 +11,29 @@ module i2s_mask (
 	output reg led_oe
 	);
 
-	reg[11:0] bit_count;
+	reg[11:0] current_bit_index;
 	reg[11:0] first_bit_index;
-	reg[11:0] total_data_bits;
+	reg[11:0] last_bit_index;
 
 	reg reading_header = 1;
 	reg[15:0] header;
-	wire[3:0] num_modules_x, num_modules_y;
-	wire[5:0] internal_row_num;
-	assign num_modules_x[3:0] = header[15:12];
-	assign num_modules_y[3:0] = header[11:8];
-	assign internal_row_num = header[5:0];
+	reg[3:0] num_modules_x, num_modules_y;
 
 	reg led_clk_en = 0;
 	assign led_clk = i2s_clk && led_clk_en;
 	assign led_data = i2s_data;
 
+	reg led_lat_needed = 0;
+
 	integer i;
 
 	always @(posedge i2s_clk or negedge rst_n) begin : proc_stream
 		if (~rst_n) begin
-			bit_count <= 0;
+			current_bit_index <= 0;
 			
 			reading_header <= 1;
 			first_bit_index <= 0;
-			total_data_bits <= 0;
+			last_bit_index <= 0;
 
 			row_num <= 0;
 			header <= 0;
@@ -44,42 +42,43 @@ module i2s_mask (
 			led_lat <= 0;
 			led_oe = 1;
 		end else if (reading_header) begin
-			bit_count <= bit_count + 1;
-			led_lat <= 0;
+			if (led_lat_needed) begin 
+				led_lat <= 1;
+				led_lat_needed <= 0;
+				led_clk_en <= 0;
+			end else begin
+				led_lat <= 0;
+			end
 
-			header <= header << 1;
-			header[0] <= i2s_data;
+			current_bit_index <= current_bit_index + 1;
+			header <= {header[14:0], i2s_data};
 
-			if (bit_count == 15) begin 
+			if (current_bit_index == 4) num_modules_x <= header[3:0];
+
+			if (current_bit_index == 8) num_modules_y <= header[3:0];
+
+			if (current_bit_index == 15) begin 
 				reading_header <= 0;
-				bit_count <= 0;
+				current_bit_index <= 0;
 				first_bit_index <= 4 * ((addr_y * (num_modules_x + 1) * 4) + addr_x);
-				total_data_bits <= 16 * (num_modules_x + 1) * (num_modules_y + 1);
+				last_bit_index <= (16 * (num_modules_x + 1) * (num_modules_y + 1)) - 1;
 			end
 		end else begin 
-			bit_count <=  bit_count + 1;
+			current_bit_index <=  current_bit_index + 1;
 
 			for (i = 0; i < 4; i = i + 1) begin 
-				if (bit_count == first_bit_index + (i * (num_modules_x + 1) * 4))
-					led_clk_en <= 1;
-				else if (bit_count == first_bit_index + (i * (num_modules_x + 1) * 4) + 4)
-					led_clk_en <= 0;
+				if (current_bit_index == first_bit_index + (i * (num_modules_x + 1) * 4)) led_clk_en <= 1;
+				if (current_bit_index == first_bit_index + (i * (num_modules_x + 1) * 4) + 4) led_clk_en <= 0;
 			end
 
-			if (bit_count == total_data_bits) begin 
-				bit_count <= 0;	
+			if (current_bit_index == last_bit_index) begin
+				current_bit_index <= 0;	
 				header <= 0;
 				reading_header <= 1;
+				led_lat_needed <= 1;
 
-				led_lat <= 1;
-				led_oe <= 0;
-
-				row_num <= internal_row_num;
+				row_num <= header[5:0];
 			end
 		end
 	end
-
-
-
-
 endmodule

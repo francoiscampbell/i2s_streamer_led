@@ -28,7 +28,7 @@ module i2s_mask (
 	integer i;
 
 	always @(posedge i2s_clk or negedge rst_n) begin : proc_stream
-		if (rst_n) begin 
+		if (~rst_n) begin 
 			current_bit_index <= 0;
 		
 			reading_header <= 1;

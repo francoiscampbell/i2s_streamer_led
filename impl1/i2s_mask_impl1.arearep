@@ -1,16 +1,41 @@
 ----------------------------------------------------------------------
-Report for cell i2s_mask.TECH
-Register bits:  55 of 7209 (0.763%)
+Report for cell top.TECH
+Register bits:  58 of 877 (6.613%)
 I/O cells:      21
                                   Cell usage:
                                cell     count   Res Usage(%)
-                              CCU2D        98          100.0
-                            FD1P3AX        35          100.0
-                            FD1S3AX         7          100.0
+                              CCU2D       100          100.0
+                            FD1P3AX        37          100.0
+                            FD1S3AX         6          100.0
                             FD1S3AY         1          100.0
-                            FD1S3IX        12          100.0
+                            FD1S3IX        14          100.0
                                 GSR         1          100.0
                                  IB        11          100.0
-                               LUT4       126          100.0
+                               LUT4       128          100.0
                                  OB        10          100.0
-                              TOTAL       301
+SUB MODULES
+                            clk_div         1
+                           i2s_mask         1
+                              TOTAL       310
+----------------------------------------------------------------------
+Report for cell clk_div.v1
+Instance Path : div_4
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D         2            2.0
+                            FD1P3AX         1            2.7
+                            FD1S3IX         2           14.3
+                               LUT4         2            1.6
+                              TOTAL         7
+----------------------------------------------------------------------
+Report for cell i2s_mask.v1
+Instance Path : mask
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D        98           98.0
+                            FD1P3AX        36           97.3
+                            FD1S3AX         6          100.0
+                            FD1S3AY         1          100.0
+                            FD1S3IX        12           85.7
+                               LUT4       125           97.7
+                              TOTAL       278

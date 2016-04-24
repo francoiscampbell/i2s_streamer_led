@@ -1,0 +1,14 @@
+[Version]
+Version=10.2
+[Designs]
+i2s_mask=i2s_mask.adf
+[Settings]
+Active=i2s_mask
+[Expand]
+i2s_mask=1
+[Browser]
+sort=order
+mode=none
+[Order]
+order=1
+macro=

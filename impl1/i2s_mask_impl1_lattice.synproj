@@ -1,6 +1,6 @@
 -a "MachXO2"
--d LCMXO2-7000HC
--t TQFP144
+-d LCMXO2-640HC
+-t TQFP100
 -s 4
 
 -optimization_goal Balanced
@@ -32,10 +32,12 @@
 -lpf 1
 -p "C:/Users/Francois Campbell/GoogleDrive/Electronics/LatticeDiamond/i2s_mask"
 -ver "C:/Users/Francois Campbell/GoogleDrive/Electronics/LatticeDiamond/i2s_mask/i2s_mask.v"
--top i2s_mask
+"C:/Users/Francois Campbell/GoogleDrive/Electronics/LatticeDiamond/i2s_mask/top.v"
+"C:/Users/Francois Campbell/GoogleDrive/Electronics/LatticeDiamond/i2s_mask/clk_div.v"
+-top top
 
 
--p "C:/Program Files/Lattice/diamond/3.6_x64/ispfpga/xo2c00/data" "C:/Users/Francois Campbell/GoogleDrive/Electronics/LatticeDiamond/i2s_mask/impl1" "C:/Users/Francois Campbell/GoogleDrive/Electronics/LatticeDiamond/i2s_mask"
+-p "C:/Program Files/Lattice/diamond/3.7_x64/ispfpga/xo2c00/data" "C:/Users/Francois Campbell/GoogleDrive/Electronics/LatticeDiamond/i2s_mask/impl1" "C:/Users/Francois Campbell/GoogleDrive/Electronics/LatticeDiamond/i2s_mask"
 
 -ngd "i2s_mask_impl1.ngd"
 

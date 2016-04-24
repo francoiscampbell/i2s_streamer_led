@@ -1,0 +1,56 @@
+timestamp=1461534064509
+
+[~A]
+C:/Users/Francois Campbell/GoogleDrive/Electronics/LatticeDiamond/i2s_mask/clk_div.v=0*9785*10421
+C:/Users/Francois Campbell/GoogleDrive/Electronics/LatticeDiamond/i2s_mask/i2s_mask.v=0*438*1620
+C:/Users/Francois Campbell/GoogleDrive/Electronics/LatticeDiamond/i2s_mask/i2s_mask_tb.v=0*5979*7067
+C:/Users/Francois Campbell/GoogleDrive/Electronics/LatticeDiamond/i2s_mask/top.v=0*8147*8795
+LastVerilogToplevel=top
+ModifyID=6
+Version=73
+
+[$root]
+A/$root=22|||1*14802
+BinI32/$root=3*10059
+SLP=3*10163
+Version=10.2.3312.5682  (Windows)|00000009789cd3f53752d02d33ca3605000a8e0244|c73a565f2ade592f8ac1c68f484c92166c8926b3e833aa92327646d0a6667d5c
+
+[clk_div]
+A/clk_div=22|./../../clk_div.v|1|1*15176
+BinI32/clk_div=3*10231
+R=./../../clk_div.v|1
+SLP=3*11051
+Version=10.2.3312.5682  (Windows)|00000009789cd3f53752d02d33ca3605000a8e0244|a6c4b70a37c8e6c4ecdb3eafe34c76db26527262ddaa47cb266f3a3c4d9b973a2b6cf5619424dff6bcead63afff50713
+
+[i2s_mask]
+A/i2s_mask=22|./../../i2s_mask.v|1|1*374
+BinI32/i2s_mask=3*172
+R=./../../i2s_mask.v|1
+SLP=3*2509
+Version=10.2.3312.5682  (Windows)|0000000a789cd34d494a57d02d33ca360500104b02f0|87e0804e78053cd9c8cb2df9670b6f963779737f0702b035ba5287f3ae82ef4fb8d7fdc7cea9eb1aca2a502a443e9aec
+
+[i2s_mask_tb]
+A/i2s_mask_tb=22|./../../i2s_mask_tb.v|3|1*8130
+BinI32/i2s_mask_tb=3*5741
+R=./../../i2s_mask_tb.v|3
+SLP=3*8596
+Version=10.2.3312.5682  (Windows)|0000000a789cd34d494a57d02d33ca360500104b02f0|55bb4496ac8e2a307007033985f41f8ca7451ac5a2ac9c45576e249544cd0438a7006675d1dc379d1dbd13931e80c492
+
+[top]
+A/top=22|./../../top.v|1|1*12657
+BinI32/top=3*9668
+R=./../../top.v|1
+SLP=3*9878
+Version=10.2.3312.5682  (Windows)|00000009789cd3f53752d02d33ca3605000a8e0244|f1fdecad8dc292011c024b8d633bc5c714f29ec25e0fb951993aec2a4adde916
+
+[~MFT]
+0=6|0work.mgf|10421|2506
+1=4|1work.mgf|15176|5458
+3=8|3work.mgf|11051|2364
+
+[~U]
+$root=12|0*9404|
+clk_div=12|0*9586|
+i2s_mask=12|0*166||0x10
+i2s_mask_tb=12|0*5754||0x10
+top=12|0*7866||0x10

@@ -1,0 +1,478 @@
+designverincludedir -clear
+designverlibrarysim -PL -clear
+designverlibrarysim -L -clear
+designverlibrarysim -PL pmi_work
+designverlibrarysim ovi_machxo2
+designverdefinemacro -clear
+addfile {C:/Users/Francois Campbell/GoogleDrive/Electronics/LatticeDiamond/i2s_mask/i2s_mask.v}
+# Adding file C:\Users\Francois Campbell\GoogleDrive\Electronics\LatticeDiamond\i2s_mask\i2s_mask.v ... Done
+addfile {C:/Users/Francois Campbell/GoogleDrive/Electronics/LatticeDiamond/i2s_mask/clk_div.v}
+# Adding file C:\Users\Francois Campbell\GoogleDrive\Electronics\LatticeDiamond\i2s_mask\clk_div.v ... Done
+addfile {C:/Users/Francois Campbell/GoogleDrive/Electronics/LatticeDiamond/i2s_mask/top.v}
+# Adding file C:\Users\Francois Campbell\GoogleDrive\Electronics\LatticeDiamond\i2s_mask\top.v ... Done
+addfile {C:/Users/Francois Campbell/GoogleDrive/Electronics/LatticeDiamond/i2s_mask/i2s_mask_tb.v}
+# Adding file C:\Users\Francois Campbell\GoogleDrive\Electronics\LatticeDiamond\i2s_mask\i2s_mask_tb.v ... Done
+vlib {C:/Users/Francois Campbell/GoogleDrive/Electronics/LatticeDiamond/i2s_mask/i2s_mask/work}
+# Adding library O.K.
+adel -all
+# Library contents cleared.
+vlog -dbg -work work {C:/Users/Francois Campbell/GoogleDrive/Electronics/LatticeDiamond/i2s_mask/i2s_mask.v}
+# Compile...
+# Pass 1. Scanning modules hierarchy.
+# Pass 2. Processing instantiations.
+# Pass 3. Processing behavioral statements.
+# ELB/DAG code generating.
+# Unit top modules: i2s_mask.
+# $root top modules: i2s_mask.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# done
+vlog -dbg -work work {C:/Users/Francois Campbell/GoogleDrive/Electronics/LatticeDiamond/i2s_mask/clk_div.v}
+# Compile...
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Pass 2. Processing instantiations.
+# Pass 3. Processing behavioral statements.
+# ELB/DAG code generating.
+# Info: VCP2113 Module \$root found in current working library.
+# Unit top modules: clk_div.
+# $root top modules: i2s_mask clk_div.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# done
+vlog -dbg -work work {C:/Users/Francois Campbell/GoogleDrive/Electronics/LatticeDiamond/i2s_mask/top.v}
+# Compile...
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Info: VCP2113 Module clk_div found in current working library.
+# Info: VCP2113 Module i2s_mask found in current working library.
+# Pass 2. Processing instantiations.
+# Info: VCP2876 top.v : (20, 31): Implicit net declaration, symbol i2s_clk__div4 has not been declared in module top.
+# Pass 3. Processing behavioral statements.
+# ELB/DAG code generating.
+# Info: VCP2113 Module \$root found in current working library.
+# Unit top modules: top.
+# $root top modules: top.
+# Compile success 0 Errors 0 Warnings  Analysis time: 1[s].
+# done
+vlog -dbg -work work {C:/Users/Francois Campbell/GoogleDrive/Electronics/LatticeDiamond/i2s_mask/i2s_mask_tb.v}
+# Compile...
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Info: VCP2113 Module top found in current working library.
+# Pass 2. Processing instantiations.
+# Pass 3. Processing behavioral statements.
+# ELB/DAG code generating.
+# Info: VCP2113 Module \$root found in current working library.
+# Unit top modules: i2s_mask_tb.
+# $root top modules: i2s_mask_tb.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# done
+module i2s_mask_tb
+# ELBREAD: Elaboration process.
+# ELBREAD: Warning: Module 'top' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Warning: Module 'clk_div' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Warning: Module 'i2s_mask' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Elaboration time 0.0 [s].
+vsim +access +r i2s_mask_tb -PL pmi_work -L ovi_machxo2
+# ELBREAD: Elaboration process.
+# ELBREAD: Warning: Module 'top' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Warning: Module 'clk_div' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Warning: Module 'i2s_mask' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Elaboration time 0.0 [s].
+# vsim: Stack memory: 32MB
+# vsim: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# KERNEL: PLI/VHPI kernel's engine initialization done.
+# PLI: Loading library 'C:\Program Files\Lattice\diamond\3.7_x64\active-hdl\bin\systf.dll'
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... done : 0.0 [s]
+# SLP: Generation phase ...
+# SLP: Generation phase ... done : 0.8 [s]
+# SLP: Finished : 0.9 [s]
+# SLP: 0 primitives and 84 (100.00%) other processes in SLP
+# SLP: 666 (100.00%) signals in SLP and 0 interface signals
+# ELAB2: Elaboration final pass complete - time: 0.9 [s].
+# KERNEL: SLP loading done - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Lattice Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 5313 kB (elbread=1024 elab2=4133 kernel=154 sdf=0)
+# KERNEL: ASDB file was created in location C:\Users\Francois Campbell\GoogleDrive\Electronics\LatticeDiamond\i2s_mask\i2s_mask\src\wave.asdb
+#  5:37 PM, April 24, 2016
+#  Simulation has been initialized
+#  Selected Top-Level: i2s_mask_tb (i2s_mask_tb)
+add wave *
+# 12 signal(s) traced.
+run 1000ns
+# Waveform file 'untitled.awc' connected to 'C:/Users/Francois Campbell/GoogleDrive/Electronics/LatticeDiamond/i2s_mask/i2s_mask/src/wave.asdb'.
+# KERNEL: stopped at time: 1 us
+# 1 signal(s) traced.
+# 1 signal(s) traced.
+restart
+# ELBREAD: Elaboration process.
+# ELBREAD: Warning: Module 'top' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Warning: Module 'clk_div' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Warning: Module 'i2s_mask' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Elaboration time 0.0 [s].
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# KERNEL: PLI/VHPI kernel's engine initialization done.
+# PLI: Loading library 'C:\Program Files\Lattice\diamond\3.7_x64\active-hdl\bin\systf.dll'
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, using existing simulator library: 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# SLP: 0 primitives and 84 (100.00%) other processes in SLP
+# SLP: 666 (100.00%) signals in SLP and 0 interface signals
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: SLP loading done - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Lattice Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 5313 kB (elbread=1024 elab2=4133 kernel=154 sdf=0)
+# KERNEL: ASDB file was created in location C:\Users\Francois Campbell\GoogleDrive\Electronics\LatticeDiamond\i2s_mask\i2s_mask\src\wave.asdb
+#  5:38 PM, April 24, 2016
+#  Simulation has been initialized
+#  Selected Top-Level: i2s_mask_tb (i2s_mask_tb)
+# Waveform file 'untitled.awc' connected to 'C:/Users/Francois Campbell/GoogleDrive/Electronics/LatticeDiamond/i2s_mask/i2s_mask/src/wave.asdb'.
+run 100 ns
+alog -O2 -sve   -work work $dsn/../clk_div.v $dsn/../top.v
+# Warning: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# Compile...
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Info: VCP2113 Module i2s_mask found in current working library.
+# Pass 2. Processing instantiations.
+# Info: VCP2876 top.v : (20, 31): Implicit net declaration, symbol i2s_clk__div4 has not been declared in module top.
+# Pass 3. Processing behavioral statements.
+# Error: VCP2858 clk_div.v : (21, 36): clk_div is not a valid left-hand side of a procedural assignment.
+# Compile failure 1 Errors 0 Warnings  Analysis time: 0[s].
+# ELBREAD: Elaboration process.
+# ELBREAD: Warning: Module 'top' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Warning: Module 'clk_div' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Warning: Module 'i2s_mask' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Elaboration time 0.0 [s].
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# KERNEL: PLI/VHPI kernel's engine initialization done.
+# PLI: Loading library 'C:\Program Files\Lattice\diamond\3.7_x64\active-hdl\bin\systf.dll'
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, using existing simulator library: 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# SLP: 0 primitives and 84 (100.00%) other processes in SLP
+# SLP: 666 (100.00%) signals in SLP and 0 interface signals
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: SLP loading done - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Lattice Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 5313 kB (elbread=1024 elab2=4133 kernel=154 sdf=0)
+# KERNEL: ASDB file was created in location C:\Users\Francois Campbell\GoogleDrive\Electronics\LatticeDiamond\i2s_mask\i2s_mask\src\wave.asdb
+#  5:39 PM, April 24, 2016
+#  Simulation has been initialized
+#  Selected Top-Level: i2s_mask_tb (i2s_mask_tb)
+# Waveform file 'untitled.awc' connected to 'C:/Users/Francois Campbell/GoogleDrive/Electronics/LatticeDiamond/i2s_mask/i2s_mask/src/wave.asdb'.
+restart
+# ELBREAD: Elaboration process.
+# ELBREAD: Warning: Module 'top' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Warning: Module 'clk_div' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Warning: Module 'i2s_mask' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Elaboration time 0.0 [s].
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# KERNEL: PLI/VHPI kernel's engine initialization done.
+# PLI: Loading library 'C:\Program Files\Lattice\diamond\3.7_x64\active-hdl\bin\systf.dll'
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, using existing simulator library: 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# SLP: 0 primitives and 84 (100.00%) other processes in SLP
+# SLP: 666 (100.00%) signals in SLP and 0 interface signals
+# ELAB2: Elaboration final pass complete - time: 0.1 [s].
+# KERNEL: SLP loading done - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Lattice Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 5313 kB (elbread=1024 elab2=4133 kernel=154 sdf=0)
+# KERNEL: ASDB file was created in location C:\Users\Francois Campbell\GoogleDrive\Electronics\LatticeDiamond\i2s_mask\i2s_mask\src\wave.asdb
+#  5:39 PM, April 24, 2016
+#  Simulation has been initialized
+#  Selected Top-Level: i2s_mask_tb (i2s_mask_tb)
+# Waveform file 'untitled.awc' connected to 'C:/Users/Francois Campbell/GoogleDrive/Electronics/LatticeDiamond/i2s_mask/i2s_mask/src/wave.asdb'.
+run @100ns
+alog -O2 -sve   -work work $dsn/../top.v
+# Warning: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# Compile...
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Info: VCP2113 Module clk_div found in current working library.
+# Info: VCP2113 Module i2s_mask found in current working library.
+# Pass 2. Processing instantiations.
+# Pass 3. Processing behavioral statements.
+# Running Optimizer.
+# ELB/DAG code generating.
+# Info: VCP2113 Module \$root found in current working library.
+# Unit top modules: top.
+# $root top modules: i2s_mask_tb top.
+# Compile success 0 Errors 0 Warnings  Analysis time: 1[s].
+# done
+# ELBREAD: Elaboration process.
+# ELBREAD: Warning: Module 'top' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Warning: Module 'clk_div' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Warning: Module 'i2s_mask' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Elaboration time 0.0 [s].
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# KERNEL: PLI/VHPI kernel's engine initialization done.
+# PLI: Loading library 'C:\Program Files\Lattice\diamond\3.7_x64\active-hdl\bin\systf.dll'
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... done : 0.0 [s]
+# SLP: Generation phase ...
+# SLP: Generation phase ... done : 0.5 [s]
+# SLP: Finished : 0.6 [s]
+# SLP: 0 primitives and 100 (100.00%) other processes in SLP
+# SLP: 650 (100.00%) signals in SLP and 0 interface signals
+# ELAB2: Elaboration final pass complete - time: 0.6 [s].
+# KERNEL: SLP loading done - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Lattice Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 5313 kB (elbread=1024 elab2=4134 kernel=154 sdf=0)
+# KERNEL: ASDB file was created in location C:\Users\Francois Campbell\GoogleDrive\Electronics\LatticeDiamond\i2s_mask\i2s_mask\src\wave.asdb
+#  5:39 PM, April 24, 2016
+#  Simulation has been initialized
+#  Selected Top-Level: i2s_mask_tb (i2s_mask_tb)
+# Waveform file 'untitled.awc' connected to 'C:/Users/Francois Campbell/GoogleDrive/Electronics/LatticeDiamond/i2s_mask/i2s_mask/src/wave.asdb'.
+# Warning: WAVEFORM: Object matching /i2s_mask_tb/nodes_x[0]/nodes_y[0]/node/i2s_clk__div4 not found in C:/Users/Francois Campbell/GoogleDrive/Electronics/LatticeDiamond/i2s_mask/i2s_mask/src/wave.asdb.
+run 100 ns
+# KERNEL: stopped at time: 100 ns
+run 100 ns
+# KERNEL: stopped at time: 200 ns
+run 100 ns
+# KERNEL: stopped at time: 300 ns
+run 100 ns
+# KERNEL: stopped at time: 400 ns
+# 1 signal(s) traced.
+# 1 signal(s) traced.
+# 1 signal(s) traced.
+restart
+# ELBREAD: Elaboration process.
+# ELBREAD: Warning: Module 'top' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Warning: Module 'clk_div' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Warning: Module 'i2s_mask' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Elaboration time 0.0 [s].
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# KERNEL: PLI/VHPI kernel's engine initialization done.
+# PLI: Loading library 'C:\Program Files\Lattice\diamond\3.7_x64\active-hdl\bin\systf.dll'
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Finished. Using existing simulator library
+# SLP: 0 primitives and 100 (100.00%) other processes in SLP
+# SLP: 650 (100.00%) signals in SLP and 0 interface signals
+# ELAB2: Elaboration final pass complete - time: 0.1 [s].
+# KERNEL: SLP loading done - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Lattice Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 5313 kB (elbread=1024 elab2=4134 kernel=154 sdf=0)
+# KERNEL: ASDB file was created in location C:\Users\Francois Campbell\GoogleDrive\Electronics\LatticeDiamond\i2s_mask\i2s_mask\src\wave.asdb
+#  5:40 PM, April 24, 2016
+#  Simulation has been initialized
+#  Selected Top-Level: i2s_mask_tb (i2s_mask_tb)
+# Waveform file 'untitled.awc' connected to 'C:/Users/Francois Campbell/GoogleDrive/Electronics/LatticeDiamond/i2s_mask/i2s_mask/src/wave.asdb'.
+run 100 ns
+# KERNEL: stopped at time: 100 ns
+run 100 ns
+# KERNEL: stopped at time: 200 ns
+run 100 ns
+# KERNEL: stopped at time: 300 ns
+restart
+# ELBREAD: Elaboration process.
+# ELBREAD: Warning: Module 'top' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Warning: Module 'clk_div' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Warning: Module 'i2s_mask' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Elaboration time 0.0 [s].
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# KERNEL: PLI/VHPI kernel's engine initialization done.
+# PLI: Loading library 'C:\Program Files\Lattice\diamond\3.7_x64\active-hdl\bin\systf.dll'
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Finished. Using existing simulator library
+# SLP: 0 primitives and 100 (100.00%) other processes in SLP
+# SLP: 650 (100.00%) signals in SLP and 0 interface signals
+# ELAB2: Elaboration final pass complete - time: 0.1 [s].
+# KERNEL: SLP loading done - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Lattice Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 5313 kB (elbread=1024 elab2=4134 kernel=154 sdf=0)
+# KERNEL: ASDB file was created in location C:\Users\Francois Campbell\GoogleDrive\Electronics\LatticeDiamond\i2s_mask\i2s_mask\src\wave.asdb
+#  5:41 PM, April 24, 2016
+#  Simulation has been initialized
+#  Selected Top-Level: i2s_mask_tb (i2s_mask_tb)
+# Waveform file 'untitled.awc' connected to 'C:/Users/Francois Campbell/GoogleDrive/Electronics/LatticeDiamond/i2s_mask/i2s_mask/src/wave.asdb'.
+run 100 ns
+alog -O2 -sve   -work work $dsn/../clk_div.v
+# Warning: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# Compile...
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Pass 2. Processing instantiations.
+# Pass 3. Processing behavioral statements.
+# Running Optimizer.
+# ELB/DAG code generating.
+# Info: VCP2113 Module \$root found in current working library.
+# $root top modules: i2s_mask_tb top.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# done
+# ELBREAD: Elaboration process.
+# ELBREAD: Warning: Module 'top' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Warning: Module 'clk_div' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Warning: Module 'i2s_mask' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Elaboration time 0.0 [s].
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# KERNEL: PLI/VHPI kernel's engine initialization done.
+# PLI: Loading library 'C:\Program Files\Lattice\diamond\3.7_x64\active-hdl\bin\systf.dll'
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... done : 0.0 [s]
+# SLP: Generation phase ...
+# SLP: Generation phase ... done : 0.6 [s]
+# SLP: Finished : 0.6 [s]
+# SLP: 0 primitives and 116 (100.00%) other processes in SLP
+# SLP: 666 (100.00%) signals in SLP and 0 interface signals
+# ELAB2: Elaboration final pass complete - time: 0.6 [s].
+# KERNEL: SLP loading done - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Lattice Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 5314 kB (elbread=1024 elab2=4134 kernel=154 sdf=0)
+# KERNEL: ASDB file was created in location C:\Users\Francois Campbell\GoogleDrive\Electronics\LatticeDiamond\i2s_mask\i2s_mask\src\wave.asdb
+#  5:41 PM, April 24, 2016
+#  Simulation has been initialized
+#  Selected Top-Level: i2s_mask_tb (i2s_mask_tb)
+# Waveform file 'untitled.awc' connected to 'C:/Users/Francois Campbell/GoogleDrive/Electronics/LatticeDiamond/i2s_mask/i2s_mask/src/wave.asdb'.
+run 100 ns
+# KERNEL: stopped at time: 100 ns
+run 100 ns
+# KERNEL: stopped at time: 200 ns
+run 100 ns
+# KERNEL: stopped at time: 300 ns
+# 1 signal(s) traced.
+run 100 ns
+# KERNEL: stopped at time: 400 ns
+run 100 ns
+# KERNEL: stopped at time: 500 ns
+run 100 ns
+# KERNEL: stopped at time: 600 ns
+# 1 signal(s) traced.
+# 1 signal(s) traced.
+run @700ns
+# KERNEL: stopped at time: 700 ns
+run @10000.7us
+# RUNTIME: Info: RUNTIME_0068 i2s_mask_tb.v (58): $finish called.
+# KERNEL: Time: 5525 ns,  Iteration: 0,  Instance: /i2s_mask_tb,  Process: @INITIAL#36_3@.
+# KERNEL: stopped at time: 5525 ns
+restart
+# ELBREAD: Elaboration process.
+# ELBREAD: Warning: Module 'top' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Warning: Module 'clk_div' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Warning: Module 'i2s_mask' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Elaboration time 0.0 [s].
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# KERNEL: PLI/VHPI kernel's engine initialization done.
+# PLI: Loading library 'C:\Program Files\Lattice\diamond\3.7_x64\active-hdl\bin\systf.dll'
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Finished. Using existing simulator library
+# SLP: 0 primitives and 116 (100.00%) other processes in SLP
+# SLP: 666 (100.00%) signals in SLP and 0 interface signals
+# ELAB2: Elaboration final pass complete - time: 0.1 [s].
+# KERNEL: SLP loading done - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Lattice Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 5314 kB (elbread=1024 elab2=4134 kernel=154 sdf=0)
+# KERNEL: ASDB file was created in location C:\Users\Francois Campbell\GoogleDrive\Electronics\LatticeDiamond\i2s_mask\i2s_mask\src\wave.asdb
+#  5:42 PM, April 24, 2016
+#  Simulation has been initialized
+#  Selected Top-Level: i2s_mask_tb (i2s_mask_tb)
+# Waveform file 'untitled.awc' connected to 'C:/Users/Francois Campbell/GoogleDrive/Electronics/LatticeDiamond/i2s_mask/i2s_mask/src/wave.asdb'.
+run @10ms
+# RUNTIME: Info: RUNTIME_0068 i2s_mask_tb.v (58): $finish called.
+# KERNEL: Time: 5525 ns,  Iteration: 0,  Instance: /i2s_mask_tb,  Process: @INITIAL#36_3@.
+# KERNEL: stopped at time: 5525 ns
+# Qt: Untested Windows version 6.2 detected!
+# Conflict in C:/Program Files/Lattice/diamond/3.7_x64/active-hdl/bin/imageformats/qgif4.dll:
+#  Plugin cannot be queried successfully!
+# Qt: Untested Windows version 6.2 detected!
+# Conflict in C:/Program Files/Lattice/diamond/3.7_x64/active-hdl/bin/imageformats/qico4.dll:
+#  Plugin cannot be queried successfully!
+# Qt: Untested Windows version 6.2 detected!
+# Conflict in C:/Program Files/Lattice/diamond/3.7_x64/active-hdl/bin/imageformats/qjpeg4.dll:
+#  Plugin cannot be queried successfully!
+# Qt: Untested Windows version 6.2 detected!
+# Conflict in C:/Program Files/Lattice/diamond/3.7_x64/active-hdl/bin/imageformats/qmng4.dll:
+#  Plugin cannot be queried successfully!
+# Qt: Untested Windows version 6.2 detected!
+# Conflict in C:/Program Files/Lattice/diamond/3.7_x64/active-hdl/bin/imageformats/qtiff4.dll:
+#  Plugin cannot be queried successfully!
+#  Simulation has been stopped

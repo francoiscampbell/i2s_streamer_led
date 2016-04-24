@@ -1,0 +1,32 @@
+---------------------------------------------------
+Report for cell top
+   Instance path: top
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	     165.00        100.0
+                                  LUT4	     129.00        100.0
+                                 IOBUF	         21        100.0
+                                PFUREG	         58        100.0
+                                RIPPLE	        100        100.0
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+                              i2s_mask	          1        97.7
+                               clk_div	          1         1.8
+---------------------------------------------------
+Report for cell clk_div
+   Instance path: top/div_4
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       3.00         1.8
+                                  LUT4	       2.00         1.6
+                                PFUREG	          3         5.2
+                                RIPPLE	          2         2.0
+---------------------------------------------------
+Report for cell i2s_mask
+   Instance path: top/mask
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	     161.25        97.7
+                                  LUT4	     125.00        96.9
+                                PFUREG	         55        94.8
+                                RIPPLE	         98        98.0

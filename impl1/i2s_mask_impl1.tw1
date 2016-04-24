@@ -1,0 +1,213 @@
+
+Loading design for application trce from file i2s_mask_impl1_map.ncd.
+Design name: top
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LCMXO2-640HC
+Package:     TQFP100
+Performance: 4
+Loading device for application trce from file 'xo2c640.nph' in environment: C:/Program Files/Lattice/diamond/3.7_x64/ispfpga.
+Package Status:                     Final          Version 1.36.
+Performance Hardware Data Status:   Final          Version 33.4.
+Setup and Hold Report
+
+--------------------------------------------------------------------------------
+Lattice TRACE Report - Setup, Version Diamond (64-bit) 3.7.0.96.1
+Sun Apr 24 17:54:23 2016
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2016 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Command line:    trce -v 1 -gt -mapchkpnt 0 -sethld -o i2s_mask_impl1.tw1 -gui -msgset C:/Users/Francois Campbell/GoogleDrive/Electronics/LatticeDiamond/i2s_mask/promote.xml i2s_mask_impl1_map.ncd i2s_mask_impl1.prf 
+Design file:     i2s_mask_impl1_map.ncd
+Preference file: i2s_mask_impl1.prf
+Device,speed:    LCMXO2-640HC,4
+Report level:    verbose report, limited to 1 item per preference
+--------------------------------------------------------------------------------
+
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+Preference: FREQUENCY NET "i2s_clk_c" 80.000000 MHz ;
+            10 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed: The following path meets requirements by 8.811ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              div_4/count_128_129__i2  (from i2s_clk_c +)
+   Destination:    FF         Data in        div_4/count_128_129__i1  (to i2s_clk_c +)
+
+   Delay:               3.415ns  (27.7% logic, 72.3% route), 2 logic levels.
+
+ Constraint Details:
+
+      3.415ns physical path delay div_4/SLICE_1 to div_4/SLICE_0 meets
+     12.500ns delay constraint less
+      0.274ns LSR_SET requirement (totaling 12.226ns) by 8.811ns
+
+ Physical Path Details:
+
+      Data path div_4/SLICE_1 to div_4/SLICE_0:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.452 *4/SLICE_1.CLK to *_4/SLICE_1.Q0 div_4/SLICE_1 (from i2s_clk_c)
+ROUTE         3   e 1.234 *_4/SLICE_1.Q0 to */SLICE_100.B1 div_4/count_1
+CTOF_DEL    ---     0.495 */SLICE_100.B1 to */SLICE_100.F1 div_4/SLICE_100
+ROUTE         2   e 1.234 */SLICE_100.F1 to *4/SLICE_0.LSR div_4/n1254 (to i2s_clk_c)
+                  --------
+                    3.415   (27.7% logic, 72.3% route), 2 logic levels.
+
+Report:  271.076MHz is the maximum frequency for this preference.
+
+Report Summary
+--------------
+----------------------------------------------------------------------------
+Preference                              |   Constraint|       Actual|Levels
+----------------------------------------------------------------------------
+                                        |             |             |
+FREQUENCY NET "i2s_clk_c" 80.000000 MHz |             |             |
+;                                       |   80.000 MHz|  271.076 MHz|   2  
+                                        |             |             |
+----------------------------------------------------------------------------
+
+
+All preferences were met.
+
+
+Clock Domains Analysis
+------------------------
+
+Found 2 clocks:
+
+Clock Domain: i2s_clk_c   Source: i2s_clk.PAD   Loads: 3
+   Covered under: FREQUENCY NET "i2s_clk_c" 80.000000 MHz ;
+
+Clock Domain: i2s_clk_div4   Source: div_4/SLICE_100.Q0   Loads: 34
+   No transfer within this clock domain is found
+
+
+Timing summary (Setup):
+---------------
+
+Timing errors: 0  Score: 0
+Cumulative negative slack: 0
+
+Constraints cover 10 paths, 1 nets, and 19 connections (1.82% coverage)
+
+--------------------------------------------------------------------------------
+Lattice TRACE Report - Hold, Version Diamond (64-bit) 3.7.0.96.1
+Sun Apr 24 17:54:23 2016
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2016 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Command line:    trce -v 1 -gt -mapchkpnt 0 -sethld -o i2s_mask_impl1.tw1 -gui -msgset C:/Users/Francois Campbell/GoogleDrive/Electronics/LatticeDiamond/i2s_mask/promote.xml i2s_mask_impl1_map.ncd i2s_mask_impl1.prf 
+Design file:     i2s_mask_impl1_map.ncd
+Preference file: i2s_mask_impl1.prf
+Device,speed:    LCMXO2-640HC,M
+Report level:    verbose report, limited to 1 item per preference
+--------------------------------------------------------------------------------
+
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+Preference: FREQUENCY NET "i2s_clk_c" 80.000000 MHz ;
+            10 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed: The following path meets requirements by 0.447ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              div_4/clk_div_internal_15  (from i2s_clk_c +)
+   Destination:    FF         Data in        div_4/clk_div_internal_15  (to i2s_clk_c +)
+
+   Delay:               0.434ns  (53.9% logic, 46.1% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.434ns physical path delay div_4/SLICE_100 to div_4/SLICE_100 meets
+     -0.013ns DIN_HLD and
+      0.000ns delay constraint requirement (totaling -0.013ns) by 0.447ns
+
+ Physical Path Details:
+
+      Data path div_4/SLICE_100 to div_4/SLICE_100:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133 *SLICE_100.CLK to */SLICE_100.Q0 div_4/SLICE_100 (from i2s_clk_c)
+ROUTE        34   e 0.199 */SLICE_100.Q0 to */SLICE_100.C0 i2s_clk_div4
+CTOF_DEL    ---     0.101 */SLICE_100.C0 to */SLICE_100.F0 div_4/SLICE_100
+ROUTE         1   e 0.001 */SLICE_100.F0 to *SLICE_100.DI0 div_4/clk_div_N_19 (to i2s_clk_c)
+                  --------
+                    0.434   (53.9% logic, 46.1% route), 2 logic levels.
+
+Report Summary
+--------------
+----------------------------------------------------------------------------
+Preference(MIN Delays)                  |   Constraint|       Actual|Levels
+----------------------------------------------------------------------------
+                                        |             |             |
+FREQUENCY NET "i2s_clk_c" 80.000000 MHz |             |             |
+;                                       |     0.000 ns|     0.447 ns|   2  
+                                        |             |             |
+----------------------------------------------------------------------------
+
+
+All preferences were met.
+
+
+Clock Domains Analysis
+------------------------
+
+Found 2 clocks:
+
+Clock Domain: i2s_clk_c   Source: i2s_clk.PAD   Loads: 3
+   Covered under: FREQUENCY NET "i2s_clk_c" 80.000000 MHz ;
+
+Clock Domain: i2s_clk_div4   Source: div_4/SLICE_100.Q0   Loads: 34
+   No transfer within this clock domain is found
+
+
+Timing summary (Hold):
+---------------
+
+Timing errors: 0  Score: 0
+Cumulative negative slack: 0
+
+Constraints cover 10 paths, 1 nets, and 19 connections (1.82% coverage)
+
+
+
+Timing summary (Setup and Hold):
+---------------
+
+Timing errors: 0 (setup), 0 (hold)
+Score: 0 (setup), 0 (hold)
+Cumulative negative slack: 0 (0+0)
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+

@@ -1,5 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <BaliMessageLog>
+    <Task name="MapVerilogSimFile">
+        <Message>
+            <ID>35400250</ID>
+            <Severity>Info</Severity>
+            <Dynamic>0</Dynamic>
+        </Message>
+    </Task>
+    <Task name="MapVHDLSimFile">
+        <Message>
+            <ID>35400250</ID>
+            <Severity>Info</Severity>
+            <Dynamic>0</Dynamic>
+        </Message>
+    </Task>
     <Task name="Lattice_Synthesis">
         <Message>
             <ID>35002000</ID>
@@ -8,19 +22,26 @@
         <Message>
             <ID>35901018</ID>
             <Severity>Info</Severity>
+            <Dynamic>c:/users/francois campbell/googledrive/electronics/latticediamond/i2s_mask/top.v(1): </Dynamic>
+            <Dynamic>top</Dynamic>
+            <Navigation>c:/users/francois campbell/googledrive/electronics/latticediamond/i2s_mask/top.v</Navigation>
+            <Navigation>1</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>c:/users/francois campbell/googledrive/electronics/latticediamond/i2s_mask/clk_div.v(1): </Dynamic>
+            <Dynamic>clk_div</Dynamic>
+            <Navigation>c:/users/francois campbell/googledrive/electronics/latticediamond/i2s_mask/clk_div.v</Navigation>
+            <Navigation>1</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
             <Dynamic>c:/users/francois campbell/googledrive/electronics/latticediamond/i2s_mask/i2s_mask.v(1): </Dynamic>
             <Dynamic>i2s_mask</Dynamic>
             <Navigation>c:/users/francois campbell/googledrive/electronics/latticediamond/i2s_mask/i2s_mask.v</Navigation>
             <Navigation>1</Navigation>
-        </Message>
-        <Message>
-            <ID>35901209</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>c:/users/francois campbell/googledrive/electronics/latticediamond/i2s_mask/i2s_mask.v(53): </Dynamic>
-            <Dynamic>32</Dynamic>
-            <Dynamic>12</Dynamic>
-            <Navigation>c:/users/francois campbell/googledrive/electronics/latticediamond/i2s_mask/i2s_mask.v</Navigation>
-            <Navigation>53</Navigation>
         </Message>
         <Message>
             <ID>35901209</ID>
@@ -53,7 +74,7 @@
             <ID>35935014</ID>
             <Severity>Warning</Severity>
             <Dynamic>c:/users/francois campbell/googledrive/electronics/latticediamond/i2s_mask/i2s_mask.v(82): </Dynamic>
-            <Dynamic>led_oe_108</Dynamic>
+            <Dynamic>\mask/led_oe_108</Dynamic>
             <Navigation>c:/users/francois campbell/googledrive/electronics/latticediamond/i2s_mask/i2s_mask.v</Navigation>
             <Navigation>82</Navigation>
         </Message>
@@ -61,17 +82,31 @@
             <ID>35001747</ID>
             <Severity>Warning</Severity>
             <Dynamic>10</Dynamic>
-            <Dynamic>first_bit_index</Dynamic>
+            <Dynamic>\mask/first_bit_index</Dynamic>
         </Message>
         <Message>
             <ID>35001747</ID>
             <Severity>Warning</Severity>
             <Dynamic>11</Dynamic>
-            <Dynamic>first_bit_index</Dynamic>
+            <Dynamic>\mask/first_bit_index</Dynamic>
         </Message>
         <Message>
             <ID>35001611</ID>
             <Severity>Warning</Severity>
+        </Message>
+    </Task>
+    <Task name="PAR">
+        <Message>
+            <ID>66011008</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>
+   Signal=i2s_clk_c loads=3 clock_loads=3</Dynamic>
+        </Message>
+        <Message>
+            <ID>66011008</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>
+   Signal=i2s_clk_c loads=3 clock_loads=3</Dynamic>
         </Message>
     </Task>
 </BaliMessageLog>

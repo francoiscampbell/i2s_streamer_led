@@ -1,12 +1,12 @@
 module i2s_mask (
-	input rst_n,
-	input i2s_data,    // Data
 	input i2s_clk, // Clock
+	input i2s_data,    // Data	
 	input [3:0] addr_x,
 	input [3:0] addr_y,
+	input rst_n,
 	output reg[5:0] row_num,
-	output wire led_data,
-	output wire led_clk,
+	output led_clk,
+	output led_data,
 	output reg led_lat,
 	output reg led_oe
 	);
@@ -50,7 +50,7 @@ module i2s_mask (
 				led_lat <= 0;
 			end
 
-			current_bit_index <= current_bit_index + 1;
+			current_bit_index <= current_bit_index + 12'b1;
 			header <= {header[14:0], i2s_data};
 
 			case (current_bit_index)

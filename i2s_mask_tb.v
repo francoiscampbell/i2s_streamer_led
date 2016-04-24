@@ -1,4 +1,4 @@
-`timescale 1ns / 1ns
+`timescale 1ns / 1ps
 
 module i2s_mask_tb ();
 	reg rst_n = 1;
@@ -26,12 +26,12 @@ module i2s_mask_tb ();
 	generate
 		for (x = 0; x < int_num_modules_x; x = x + 1) begin : nodes_x
 			for (y = 0; y < int_num_modules_y; y = y + 1) begin : nodes_y
-     			i2s_mask node(rst_n, i2s_data, i2s_clk, x[3:0], y[3:0],,,,,);
+     			top node(i2s_clk, i2s_data, x[3:0], y[3:0], rst_n,,,,,);
     		end
 		end 
 	endgenerate
 
-	always clk = #10 ~clk;
+	always clk = #6.25 ~clk; //80 MHz clock
 
 	initial begin
 		$dumpfile("i2s_mask.vcd");

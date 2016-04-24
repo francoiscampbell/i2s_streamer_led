@@ -8,7 +8,7 @@ module clk_div(
 	reg [6:0] count = 0;
 	
 	wire [6:0] div_internal;
-	assign div_internal = div >> 1;
+	assign toggle_count = (div >> 1) - 1;
 	
 	reg clk_div_internal = 0;
 	assign clk_div = clk_div_internal;
@@ -17,7 +17,7 @@ module clk_div(
 		if (~rst_n) begin
 			count <= 0;
 		end else begin
-			if (count == div_internal) begin
+			if (count == toggle_count) begin
 				clk_div_internal <= ~clk_div_internal;
 				count <= 0;
 			end else begin

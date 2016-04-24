@@ -26,16 +26,627 @@ Verilog syntax check successful!
 Selecting top level module i2s_mask
 @N: CG364 :"C:\Users\Francois Campbell\GoogleDrive\Electronics\LatticeDiamond\i2s_mask\i2s_mask.v":1:7:1:14|Synthesizing module i2s_mask
 
-@W: CG136 :"C:\Users\Francois Campbell\GoogleDrive\Electronics\LatticeDiamond\i2s_mask\i2s_mask.v":31:2:31:3|Edge and condition mismatch
 @W: CL271 :"C:\Users\Francois Campbell\GoogleDrive\Electronics\LatticeDiamond\i2s_mask\i2s_mask.v":30:1:30:6|Pruning bits 15 to 6 of header[15:0] -- not in use ...
 
-@E: CL123 :"C:\Users\Francois Campbell\GoogleDrive\Electronics\LatticeDiamond\i2s_mask\i2s_mask.v":30:1:30:6|Logic for header[5:0] does not match a standard flip-flop
+@A: CL282 :"C:\Users\Francois Campbell\GoogleDrive\Electronics\LatticeDiamond\i2s_mask\i2s_mask.v":30:1:30:6|Feedback mux created for signal num_modules_y[3:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A: CL282 :"C:\Users\Francois Campbell\GoogleDrive\Electronics\LatticeDiamond\i2s_mask\i2s_mask.v":30:1:30:6|Feedback mux created for signal num_modules_x[3:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@W: CL113 :"C:\Users\Francois Campbell\GoogleDrive\Electronics\LatticeDiamond\i2s_mask\i2s_mask.v":30:1:30:6|Feedback mux created for signal led_oe.
+@A: CL282 :"C:\Users\Francois Campbell\GoogleDrive\Electronics\LatticeDiamond\i2s_mask\i2s_mask.v":30:1:30:6|Feedback mux created for signal led_lat_needed -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@W: CL251 :"C:\Users\Francois Campbell\GoogleDrive\Electronics\LatticeDiamond\i2s_mask\i2s_mask.v":30:1:30:6|All reachable assignments to led_oe assign 1, register removed by optimization
+@W: CL190 :"C:\Users\Francois Campbell\GoogleDrive\Electronics\LatticeDiamond\i2s_mask\i2s_mask.v":30:1:30:6|Optimizing register bit first_bit_index[0] to a constant 0
+@W: CL190 :"C:\Users\Francois Campbell\GoogleDrive\Electronics\LatticeDiamond\i2s_mask\i2s_mask.v":30:1:30:6|Optimizing register bit first_bit_index[1] to a constant 0
+@W: CL279 :"C:\Users\Francois Campbell\GoogleDrive\Electronics\LatticeDiamond\i2s_mask\i2s_mask.v":30:1:30:6|Pruning register bits 1 to 0 of first_bit_index[11:0] 
+
+@W: CL279 :"C:\Users\Francois Campbell\GoogleDrive\Electronics\LatticeDiamond\i2s_mask\i2s_mask.v":30:1:30:6|Pruning register bits 3 to 1 of last_bit_index[11:0] 
+
+
+At c_ver Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 75MB peak: 76MB)
+
 Process took 0h:00m:01s realtime, 0h:00m:01s cputime
-# Sat Apr 23 16:31:21 2016
+# Sat Apr 23 16:41:55 2016
+
+###########################################################]
+Synopsys Netlist Linker, version comp201503sp1p1, Build 117R, built Aug 18 2015
+@N|Running in 64-bit mode
+@N: NF107 :"C:\Users\Francois Campbell\GoogleDrive\Electronics\LatticeDiamond\i2s_mask\i2s_mask.v":1:7:1:14|Selected library: work cell: i2s_mask view verilog as top level
+@N: NF107 :"C:\Users\Francois Campbell\GoogleDrive\Electronics\LatticeDiamond\i2s_mask\i2s_mask.v":1:7:1:14|Selected library: work cell: i2s_mask view verilog as top level
+
+At syn_nfilter Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 67MB peak: 68MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Sat Apr 23 16:41:55 2016
 
 ###########################################################]
 @END
+
+At c_hdl Exit (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:00s; Memory used current: 3MB peak: 4MB)
+
 Process took 0h:00m:01s realtime, 0h:00m:01s cputime
-# Sat Apr 23 16:31:21 2016
+# Sat Apr 23 16:41:56 2016
+
+###########################################################]
+Synopsys Netlist Linker, version comp201503sp1p1, Build 117R, built Aug 18 2015
+@N|Running in 64-bit mode
+@N: NF107 :"C:\Users\Francois Campbell\GoogleDrive\Electronics\LatticeDiamond\i2s_mask\i2s_mask.v":1:7:1:14|Selected library: work cell: i2s_mask view verilog as top level
+@N: NF107 :"C:\Users\Francois Campbell\GoogleDrive\Electronics\LatticeDiamond\i2s_mask\i2s_mask.v":1:7:1:14|Selected library: work cell: i2s_mask view verilog as top level
+
+At syn_nfilter Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 67MB peak: 68MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Sat Apr 23 16:41:57 2016
+
+###########################################################]
+Pre-mapping Report
+
+Synopsys Lattice Technology Pre-mapping, Version maplat, Build 1264R, Built Aug 18 2015 10:39:57
+Copyright (C) 1994-2015, Synopsys, Inc. This software and the associated documentation are proprietary to Synopsys, Inc. This software may only be used in accordance with the terms and conditions of a written license agreement with Synopsys, Inc.  All other use, reproduction, or distribution of this software is strictly prohibited.
+Product Version J-2015.03L-SP1
+
+Mapper Startup Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 99MB peak: 100MB)
+
+@L: C:\Users\Francois Campbell\GoogleDrive\Electronics\LatticeDiamond\i2s_mask\impl1\impl1_scck.rpt 
+Printing clock  summary report in "C:\Users\Francois Campbell\GoogleDrive\Electronics\LatticeDiamond\i2s_mask\impl1\impl1_scck.rpt" file 
+@N: MF248 |Running in 64-bit mode.
+@N: MF666 |Clock conversion enabled 
+
+Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 100MB peak: 102MB)
+
+
+Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 100MB peak: 102MB)
+
+
+Start loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 111MB peak: 112MB)
+
+
+Finished loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 111MB peak: 114MB)
+
+@W: FX474 |User-specified initial value defined for some sequential elements which can prevent optimum synthesis results from being achieved. 
+ICG Latch Removal Summary:
+Number of ICG latches removed:	0
+Number of ICG latches not removed:	0
+syn_allowed_resources : blockrams=26  set on top level netlist i2s_mask
+
+Finished netlist restructuring (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:00s; Memory used current: 138MB peak: 140MB)
+
+
+
+@S |Clock Summary
+*****************
+
+Start                Requested     Requested     Clock        Clock                
+Clock                Frequency     Period        Type         Group                
+-----------------------------------------------------------------------------------
+i2s_mask|i2s_clk     152.1 MHz     6.575         inferred     Autoconstr_clkgroup_0
+===================================================================================
+
+@W: MT529 :"c:\users\francois campbell\googledrive\electronics\latticediamond\i2s_mask\i2s_mask.v":30:1:30:6|Found inferred clock i2s_mask|i2s_clk which controls 55 sequential elements including reading_header. This clock has no specified timing constraint which may prevent conversion of gated or generated clocks and may adversely impact design performance. 
+
+Pre-mapping successful!
+
+At Mapper Exit (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:00s; Memory used current: 76MB peak: 140MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Sat Apr 23 16:41:59 2016
+
+###########################################################]
+Map & Optimize Report
+
+Synopsys Lattice Technology Mapper, Version maplat, Build 1264R, Built Aug 18 2015 10:39:57
+Copyright (C) 1994-2015, Synopsys, Inc. This software and the associated documentation are proprietary to Synopsys, Inc. This software may only be used in accordance with the terms and conditions of a written license agreement with Synopsys, Inc.  All other use, reproduction, or distribution of this software is strictly prohibited.
+Product Version J-2015.03L-SP1
+
+Mapper Startup Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 99MB peak: 99MB)
+
+@N: MF248 |Running in 64-bit mode.
+@N: MF666 |Clock conversion enabled 
+
+Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 98MB peak: 100MB)
+
+
+Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 98MB peak: 100MB)
+
+
+Start loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 111MB peak: 111MB)
+
+
+Finished loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 111MB peak: 113MB)
+
+
+
+Starting Optimization and Mapping (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 137MB peak: 140MB)
+
+
+Available hyper_sources - for debug and ip models
+	None Found
+
+@N: MT206 |Auto Constrain mode is enabled
+
+Finished RTL optimizations (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 138MB peak: 140MB)
+
+@N:"c:\users\francois campbell\googledrive\electronics\latticediamond\i2s_mask\i2s_mask.v":30:1:30:6|Found counter in view:work.i2s_mask(verilog) inst current_bit_index[11:0]
+@N: MF179 :"c:\users\francois campbell\googledrive\electronics\latticediamond\i2s_mask\i2s_mask.v":70:8:70:76|Found 13 bit by 13 bit '==' comparator, 'proc_stream_l3\.led_clk_en45'
+@N: MF179 :"c:\users\francois campbell\googledrive\electronics\latticediamond\i2s_mask\i2s_mask.v":71:8:71:80|Found 13 bit by 13 bit '==' comparator, 'proc_stream_l3\.led_clk_en51'
+@N: MF179 :"c:\users\francois campbell\googledrive\electronics\latticediamond\i2s_mask\i2s_mask.v":71:8:71:80|Found 13 bit by 13 bit '==' comparator, 'proc_stream_l0\.led_clk_en15'
+@N: MF179 :"c:\users\francois campbell\googledrive\electronics\latticediamond\i2s_mask\i2s_mask.v":70:8:70:76|Found 13 bit by 13 bit '==' comparator, 'proc_stream_l1\.led_clk_en21'
+@N: MF179 :"c:\users\francois campbell\googledrive\electronics\latticediamond\i2s_mask\i2s_mask.v":70:8:70:76|Found 13 bit by 13 bit '==' comparator, 'proc_stream_l2\.led_clk_en33'
+@N: MF179 :"c:\users\francois campbell\googledrive\electronics\latticediamond\i2s_mask\i2s_mask.v":71:8:71:80|Found 13 bit by 13 bit '==' comparator, 'proc_stream_l1\.led_clk_en27'
+@N: MF179 :"c:\users\francois campbell\googledrive\electronics\latticediamond\i2s_mask\i2s_mask.v":71:8:71:80|Found 13 bit by 13 bit '==' comparator, 'proc_stream_l2\.led_clk_en39'
+@N: MF179 :"c:\users\francois campbell\googledrive\electronics\latticediamond\i2s_mask\i2s_mask.v":74:7:74:42|Found 12 bit by 12 bit '==' comparator, 'proc_stream\.current_bit_index24'
+@N: MF179 :"c:\users\francois campbell\googledrive\electronics\latticediamond\i2s_mask\i2s_mask.v":70:8:70:76|Found 12 bit by 12 bit '==' comparator, 'proc_stream_l0\.led_clk_en9'
+
+Finished factoring (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:01s; Memory used current: 141MB peak: 142MB)
+
+
+Finished gated-clock and generated-clock conversion (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:01s; Memory used current: 140MB peak: 142MB)
+
+
+Finished generic timing optimizations - Pass 1 (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:01s; Memory used current: 140MB peak: 142MB)
+
+@N: FA113 :"c:\users\francois campbell\googledrive\electronics\latticediamond\i2s_mask\i2s_mask.v":63:24:63:75|Pipelining module un2_last_bit_index[11:4]
+@N: MF169 :"c:\users\francois campbell\googledrive\electronics\latticediamond\i2s_mask\i2s_mask.v":30:1:30:6|Register last_bit_index[11:4] pushed in.
+@N: FX404 :"c:\users\francois campbell\googledrive\electronics\latticediamond\i2s_mask\i2s_mask.v":71:29:71:80|Found addmux in view:work.i2s_mask(verilog) inst un1_first_bit_index_7_m_i_m2[10:0] from un1_first_bit_index_1[12:2] 
+
+Starting Early Timing Optimization (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:01s; Memory used current: 141MB peak: 142MB)
+
+
+Finished Early Timing Optimization (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:02s; Memory used current: 141MB peak: 142MB)
+
+
+Finished generic timing optimizations - Pass 2 (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:02s; Memory used current: 141MB peak: 142MB)
+
+
+Finished preparing to map (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:02s; Memory used current: 141MB peak: 142MB)
+
+
+Finished technology mapping (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:02s; Memory used current: 142MB peak: 143MB)
+
+Pass		 CPU time		Worst Slack		Luts / Registers
+------------------------------------------------------------
+   1		0h:00m:02s		    -3.98ns		 132 /        55
+   2		0h:00m:02s		    -3.98ns		 131 /        55
+   3		0h:00m:02s		    -3.98ns		 131 /        55
+   4		0h:00m:02s		    -3.98ns		 132 /        55
+@N: FX271 :"c:\users\francois campbell\googledrive\electronics\latticediamond\i2s_mask\i2s_mask.v":30:1:30:6|Instance "num_modules_x[0]" with 49 loads replicated 3 times to improve timing 
+@N: FX271 :"c:\users\francois campbell\googledrive\electronics\latticediamond\i2s_mask\i2s_mask.v":30:1:30:6|Instance "num_modules_x[1]" with 35 loads replicated 3 times to improve timing 
+@N: FX271 :"c:\users\francois campbell\googledrive\electronics\latticediamond\i2s_mask\i2s_mask.v":30:1:30:6|Instance "num_modules_x[2]" with 18 loads replicated 2 times to improve timing 
+@N: FX271 :"c:\users\francois campbell\googledrive\electronics\latticediamond\i2s_mask\i2s_mask.v":30:1:30:6|Instance "num_modules_x[3]" with 23 loads replicated 2 times to improve timing 
+Timing driven replication report
+Added 10 Registers via timing driven replication
+Added 0 LUTs via timing driven replication
+
+
+
+   5		0h:00m:02s		    -3.77ns		 131 /        65
+
+
+   6		0h:00m:02s		    -3.77ns		 131 /        65
+
+Finished technology timing optimizations and critical path resynthesis (Real Time elapsed 0h:00m:05s; CPU Time elapsed 0h:00m:02s; Memory used current: 142MB peak: 143MB)
+
+@N: FX164 |The option to pack registers in the IOB has not been specified. Please set syn_useioff attribute.  
+
+Finished restoring hierarchy (Real Time elapsed 0h:00m:05s; CPU Time elapsed 0h:00m:02s; Memory used current: 142MB peak: 143MB)
+
+
+
+#### START OF CLOCK OPTIMIZATION REPORT #####[
+
+1 non-gated/non-generated clock tree(s) driving 65 clock pin(s) of sequential element(s)
+0 gated/generated clock tree(s) driving 0 clock pin(s) of sequential element(s)
+0 instances converted, 0 sequential instances remain driven by gated/generated clocks
+
+=========================== Non-Gated/Non-Generated Clocks ============================
+Clock Tree ID     Driving Element     Drive Element Type     Fanout     Sample Instance
+---------------------------------------------------------------------------------------
+@K:CKID0001       i2s_clk             port                   65         led_lat_needed 
+=======================================================================================
+
+
+##### END OF CLOCK OPTIMIZATION REPORT ######]
+
+
+Start Writing Netlists (Real Time elapsed 0h:00m:05s; CPU Time elapsed 0h:00m:03s; Memory used current: 109MB peak: 143MB)
+
+Writing Analyst data base C:\Users\Francois Campbell\GoogleDrive\Electronics\LatticeDiamond\i2s_mask\impl1\synwork\impl1_m.srm
+
+Finished Writing Netlist Databases (Real Time elapsed 0h:00m:06s; CPU Time elapsed 0h:00m:03s; Memory used current: 141MB peak: 143MB)
+
+Writing EDIF Netlist and constraint files
+J-2015.03L-SP1
+@N: BW106 |Synplicity Constraint File capacitance units using default value of 1pF 
+
+Finished Writing EDIF Netlist and constraint files (Real Time elapsed 0h:00m:07s; CPU Time elapsed 0h:00m:03s; Memory used current: 145MB peak: 147MB)
+
+
+Start final timing analysis (Real Time elapsed 0h:00m:07s; CPU Time elapsed 0h:00m:04s; Memory used current: 144MB peak: 147MB)
+
+@W: MT420 |Found inferred clock i2s_mask|i2s_clk with period 9.96ns. Please declare a user-defined clock on object "p:i2s_clk"
+
+
+
+@S |##### START OF TIMING REPORT #####[
+# Timing Report written on Sat Apr 23 16:42:06 2016
+#
+
+
+Top view:               i2s_mask
+Requested Frequency:    100.4 MHz
+Wire load mode:         top
+Paths requested:        5
+Constraint File(s):    
+@N: MT320 |Timing report estimates place and route data. Please look at the place and route timing report for final timing.
+
+@N: MT322 |Clock constraints cover only FF-to-FF paths associated with the clock.
+
+
+
+Performance Summary 
+*******************
+
+
+Worst slack in design: -1.758
+
+                     Requested     Estimated     Requested     Estimated                Clock        Clock                
+Starting Clock       Frequency     Frequency     Period        Period        Slack      Type         Group                
+--------------------------------------------------------------------------------------------------------------------------
+i2s_mask|i2s_clk     100.4 MHz     85.3 MHz      9.961         11.719        -1.758     inferred     Autoconstr_clkgroup_0
+==========================================================================================================================
+
+
+
+
+
+Clock Relationships
+*******************
+
+Clocks                              |    rise  to  rise    |    fall  to  fall   |    rise  to  fall   |    fall  to  rise 
+---------------------------------------------------------------------------------------------------------------------------
+Starting          Ending            |  constraint  slack   |  constraint  slack  |  constraint  slack  |  constraint  slack
+---------------------------------------------------------------------------------------------------------------------------
+i2s_mask|i2s_clk  i2s_mask|i2s_clk  |  9.961       -1.758  |  No paths    -      |  No paths    -      |  No paths    -    
+===========================================================================================================================
+ Note: 'No paths' indicates there are no paths in the design for that pair of clock edges.
+       'Diff grp' indicates that paths exist but the starting clock and ending clock are in different clock groups.
+
+
+
+Interface Information 
+*********************
+
+No IO constraint found
+
+
+
+====================================
+Detailed Report for Clock: i2s_mask|i2s_clk
+====================================
+
+
+
+Starting Points with Worst Slack
+********************************
+
+                           Starting                                                            Arrival           
+Instance                   Reference            Type         Pin     Net                       Time        Slack 
+                           Clock                                                                                 
+-----------------------------------------------------------------------------------------------------------------
+num_modules_x_fast[0]      i2s_mask|i2s_clk     FD1P3AX      Q       num_modules_x_fast[0]     1.180       -1.758
+num_modules_x_fast[1]      i2s_mask|i2s_clk     FD1P3AX      Q       num_modules_x_fast[1]     1.108       -1.686
+num_modules_x_fast[2]      i2s_mask|i2s_clk     FD1P3AX      Q       num_modules_x_fast[2]     1.148       -1.292
+first_bit_index_0io[2]     i2s_mask|i2s_clk     IFS1P3DX     Q       first_bit_index[2]        1.260       -1.251
+num_modules_x_0_rep2       i2s_mask|i2s_clk     FD1P3AX      Q       num_modules_x_0_rep2      1.244       -1.235
+num_modules_x_1_rep1       i2s_mask|i2s_clk     FD1P3AX      Q       num_modules_x_1_rep1      1.204       -1.228
+first_bit_index_0io[3]     i2s_mask|i2s_clk     IFS1P3DX     Q       first_bit_index[3]        1.236       -1.227
+num_modules_x_0_rep1       i2s_mask|i2s_clk     FD1P3AX      Q       num_modules_x_0_rep1      1.228       -1.214
+num_modules_x_fast[3]      i2s_mask|i2s_clk     FD1P3AX      Q       num_modules_x_fast[3]     1.148       -1.125
+first_bit_index[4]         i2s_mask|i2s_clk     FD1P3DX      Q       first_bit_index[4]        1.232       -1.080
+=================================================================================================================
+
+
+Ending Points with Worst Slack
+******************************
+
+                          Starting                                                                    Required           
+Instance                  Reference            Type        Pin     Net                                Time         Slack 
+                          Clock                                                                                          
+-------------------------------------------------------------------------------------------------------------------------
+first_bit_index[11]       i2s_mask|i2s_clk     FD1P3DX     D       un2_first_bit_index_s_7_0_S0       9.855        -1.758
+led_clk_en                i2s_mask|i2s_clk     FD1P3DX     SP      un1_led_clk_en_2_sqmuxa_i[0]       9.489        -1.324
+led_clk_en                i2s_mask|i2s_clk     FD1P3DX     D       N_13_i                             10.050       -0.764
+last_bit_index_pipe_6     i2s_mask|i2s_clk     FD1P3DX     D       un3_last_bit_index[6]              10.050       -0.396
+last_bit_index_pipe_7     i2s_mask|i2s_clk     FD1P3DX     D       un3_last_bit_index[7]              10.050       -0.396
+first_bit_index[9]        i2s_mask|i2s_clk     FD1P3DX     D       un2_first_bit_index_cry_5_0_S0     9.855        0.126 
+first_bit_index[10]       i2s_mask|i2s_clk     FD1P3DX     D       un2_first_bit_index_cry_5_0_S1     9.855        0.126 
+header[0]                 i2s_mask|i2s_clk     FD1P3DX     SP      led_lat_needed_1_sqmuxa_i          9.489        0.597 
+header[1]                 i2s_mask|i2s_clk     FD1P3DX     SP      led_lat_needed_1_sqmuxa_i          9.489        0.597 
+header[2]                 i2s_mask|i2s_clk     FD1P3DX     SP      led_lat_needed_1_sqmuxa_i          9.489        0.597 
+=========================================================================================================================
+
+
+
+Worst Path Information
+***********************
+
+
+Path information for path number 1: 
+      Requested Period:                      9.961
+    - Setup time:                            0.106
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         9.855
+
+    - Propagation time:                      11.613
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (critical) :                     -1.758
+
+    Number of logic level(s):                7
+    Starting point:                          num_modules_x_fast[0] / Q
+    Ending point:                            first_bit_index[11] / D
+    The start point is clocked by            i2s_mask|i2s_clk [rising] on pin CK
+    The end   point is clocked by            i2s_mask|i2s_clk [rising] on pin CK
+
+Instance / Net                                      Pin      Pin               Arrival     No. of    
+Name                                   Type         Name     Dir     Delay     Time        Fan Out(s)
+-----------------------------------------------------------------------------------------------------
+num_modules_x_fast[0]                  FD1P3AX      Q        Out     1.180     1.180       -         
+num_modules_x_fast[0]                  Net          -        -       -         -           5         
+num_modules_x_fast_RNI9K0J[1]          ORCALUT4     A        In      0.000     1.180       -         
+num_modules_x_fast_RNI9K0J[1]          ORCALUT4     Z        Out     1.153     2.333       -         
+un3_first_bit_index_madd_1_0           Net          -        -       -         -           3         
+un3_first_bit_index_madd_1_cry_1_0     CCU2D        C1       In      0.000     2.333       -         
+un3_first_bit_index_madd_1_cry_1_0     CCU2D        COUT     Out     1.545     3.877       -         
+un3_first_bit_index_madd_1_cry_1       Net          -        -       -         -           1         
+un3_first_bit_index_madd_1_cry_2_0     CCU2D        CIN      In      0.000     3.877       -         
+un3_first_bit_index_madd_1_cry_2_0     CCU2D        S0       Out     1.549     5.426       -         
+un3_first_bit_index_madd_1[4]          Net          -        -       -         -           1         
+un3_first_bit_index_madd_cry_1_0       CCU2D        C1       In      0.000     5.426       -         
+un3_first_bit_index_madd_cry_1_0       CCU2D        COUT     Out     1.545     6.971       -         
+un3_first_bit_index_madd_cry_2         Net          -        -       -         -           1         
+un3_first_bit_index_madd_cry_3_0       CCU2D        CIN      In      0.000     6.971       -         
+un3_first_bit_index_madd_cry_3_0       CCU2D        S1       Out     1.549     8.520       -         
+un3_first_bit_index[6]                 Net          -        -       -         -           1         
+un2_first_bit_index_cry_5_0            CCU2D        A1       In      0.000     8.520       -         
+un2_first_bit_index_cry_5_0            CCU2D        COUT     Out     1.545     10.064      -         
+un2_first_bit_index_cry_6              Net          -        -       -         -           1         
+un2_first_bit_index_s_7_0              CCU2D        CIN      In      0.000     10.064      -         
+un2_first_bit_index_s_7_0              CCU2D        S0       Out     1.549     11.613      -         
+un2_first_bit_index_s_7_0_S0           Net          -        -       -         -           1         
+first_bit_index[11]                    FD1P3DX      D        In      0.000     11.613      -         
+=====================================================================================================
+
+
+Path information for path number 2: 
+      Requested Period:                      9.961
+    - Setup time:                            0.106
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         9.855
+
+    - Propagation time:                      11.613
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (critical) :                     -1.758
+
+    Number of logic level(s):                7
+    Starting point:                          num_modules_x_fast[0] / Q
+    Ending point:                            first_bit_index[11] / D
+    The start point is clocked by            i2s_mask|i2s_clk [rising] on pin CK
+    The end   point is clocked by            i2s_mask|i2s_clk [rising] on pin CK
+
+Instance / Net                                      Pin      Pin               Arrival     No. of    
+Name                                   Type         Name     Dir     Delay     Time        Fan Out(s)
+-----------------------------------------------------------------------------------------------------
+num_modules_x_fast[0]                  FD1P3AX      Q        Out     1.180     1.180       -         
+num_modules_x_fast[0]                  Net          -        -       -         -           5         
+num_modules_x_fast_RNI9K0J[1]          ORCALUT4     A        In      0.000     1.180       -         
+num_modules_x_fast_RNI9K0J[1]          ORCALUT4     Z        Out     1.153     2.333       -         
+un3_first_bit_index_madd_1_0           Net          -        -       -         -           3         
+un3_first_bit_index_madd_1_cry_1_0     CCU2D        C1       In      0.000     2.333       -         
+un3_first_bit_index_madd_1_cry_1_0     CCU2D        COUT     Out     1.545     3.877       -         
+un3_first_bit_index_madd_1_cry_1       Net          -        -       -         -           1         
+un3_first_bit_index_madd_1_cry_2_0     CCU2D        CIN      In      0.000     3.877       -         
+un3_first_bit_index_madd_1_cry_2_0     CCU2D        S0       Out     1.549     5.426       -         
+un3_first_bit_index_madd_1[4]          Net          -        -       -         -           1         
+un3_first_bit_index_madd_cry_1_0       CCU2D        C1       In      0.000     5.426       -         
+un3_first_bit_index_madd_cry_1_0       CCU2D        COUT     Out     1.545     6.971       -         
+un3_first_bit_index_madd_cry_2         Net          -        -       -         -           1         
+un3_first_bit_index_madd_cry_3_0       CCU2D        CIN      In      0.000     6.971       -         
+un3_first_bit_index_madd_cry_3_0       CCU2D        S0       Out     1.549     8.520       -         
+un3_first_bit_index[5]                 Net          -        -       -         -           1         
+un2_first_bit_index_cry_5_0            CCU2D        A0       In      0.000     8.520       -         
+un2_first_bit_index_cry_5_0            CCU2D        COUT     Out     1.545     10.064      -         
+un2_first_bit_index_cry_6              Net          -        -       -         -           1         
+un2_first_bit_index_s_7_0              CCU2D        CIN      In      0.000     10.064      -         
+un2_first_bit_index_s_7_0              CCU2D        S0       Out     1.549     11.613      -         
+un2_first_bit_index_s_7_0_S0           Net          -        -       -         -           1         
+first_bit_index[11]                    FD1P3DX      D        In      0.000     11.613      -         
+=====================================================================================================
+
+
+Path information for path number 3: 
+      Requested Period:                      9.961
+    - Setup time:                            0.106
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         9.855
+
+    - Propagation time:                      11.541
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (non-critical) :                 -1.686
+
+    Number of logic level(s):                7
+    Starting point:                          num_modules_x_fast[1] / Q
+    Ending point:                            first_bit_index[11] / D
+    The start point is clocked by            i2s_mask|i2s_clk [rising] on pin CK
+    The end   point is clocked by            i2s_mask|i2s_clk [rising] on pin CK
+
+Instance / Net                                      Pin      Pin               Arrival     No. of    
+Name                                   Type         Name     Dir     Delay     Time        Fan Out(s)
+-----------------------------------------------------------------------------------------------------
+num_modules_x_fast[1]                  FD1P3AX      Q        Out     1.108     1.108       -         
+num_modules_x_fast[1]                  Net          -        -       -         -           3         
+num_modules_x_fast_RNI9K0J[1]          ORCALUT4     B        In      0.000     1.108       -         
+num_modules_x_fast_RNI9K0J[1]          ORCALUT4     Z        Out     1.153     2.261       -         
+un3_first_bit_index_madd_1_0           Net          -        -       -         -           3         
+un3_first_bit_index_madd_1_cry_1_0     CCU2D        C1       In      0.000     2.261       -         
+un3_first_bit_index_madd_1_cry_1_0     CCU2D        COUT     Out     1.545     3.805       -         
+un3_first_bit_index_madd_1_cry_1       Net          -        -       -         -           1         
+un3_first_bit_index_madd_1_cry_2_0     CCU2D        CIN      In      0.000     3.805       -         
+un3_first_bit_index_madd_1_cry_2_0     CCU2D        S0       Out     1.549     5.354       -         
+un3_first_bit_index_madd_1[4]          Net          -        -       -         -           1         
+un3_first_bit_index_madd_cry_1_0       CCU2D        C1       In      0.000     5.354       -         
+un3_first_bit_index_madd_cry_1_0       CCU2D        COUT     Out     1.545     6.899       -         
+un3_first_bit_index_madd_cry_2         Net          -        -       -         -           1         
+un3_first_bit_index_madd_cry_3_0       CCU2D        CIN      In      0.000     6.899       -         
+un3_first_bit_index_madd_cry_3_0       CCU2D        S1       Out     1.549     8.448       -         
+un3_first_bit_index[6]                 Net          -        -       -         -           1         
+un2_first_bit_index_cry_5_0            CCU2D        A1       In      0.000     8.448       -         
+un2_first_bit_index_cry_5_0            CCU2D        COUT     Out     1.545     9.992       -         
+un2_first_bit_index_cry_6              Net          -        -       -         -           1         
+un2_first_bit_index_s_7_0              CCU2D        CIN      In      0.000     9.992       -         
+un2_first_bit_index_s_7_0              CCU2D        S0       Out     1.549     11.541      -         
+un2_first_bit_index_s_7_0_S0           Net          -        -       -         -           1         
+first_bit_index[11]                    FD1P3DX      D        In      0.000     11.541      -         
+=====================================================================================================
+
+
+Path information for path number 4: 
+      Requested Period:                      9.961
+    - Setup time:                            0.106
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         9.855
+
+    - Propagation time:                      11.541
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (non-critical) :                 -1.686
+
+    Number of logic level(s):                7
+    Starting point:                          num_modules_x_fast[1] / Q
+    Ending point:                            first_bit_index[11] / D
+    The start point is clocked by            i2s_mask|i2s_clk [rising] on pin CK
+    The end   point is clocked by            i2s_mask|i2s_clk [rising] on pin CK
+
+Instance / Net                                      Pin      Pin               Arrival     No. of    
+Name                                   Type         Name     Dir     Delay     Time        Fan Out(s)
+-----------------------------------------------------------------------------------------------------
+num_modules_x_fast[1]                  FD1P3AX      Q        Out     1.108     1.108       -         
+num_modules_x_fast[1]                  Net          -        -       -         -           3         
+num_modules_x_fast_RNI9K0J[1]          ORCALUT4     B        In      0.000     1.108       -         
+num_modules_x_fast_RNI9K0J[1]          ORCALUT4     Z        Out     1.153     2.261       -         
+un3_first_bit_index_madd_1_0           Net          -        -       -         -           3         
+un3_first_bit_index_madd_1_cry_1_0     CCU2D        C1       In      0.000     2.261       -         
+un3_first_bit_index_madd_1_cry_1_0     CCU2D        COUT     Out     1.545     3.805       -         
+un3_first_bit_index_madd_1_cry_1       Net          -        -       -         -           1         
+un3_first_bit_index_madd_1_cry_2_0     CCU2D        CIN      In      0.000     3.805       -         
+un3_first_bit_index_madd_1_cry_2_0     CCU2D        S0       Out     1.549     5.354       -         
+un3_first_bit_index_madd_1[4]          Net          -        -       -         -           1         
+un3_first_bit_index_madd_cry_1_0       CCU2D        C1       In      0.000     5.354       -         
+un3_first_bit_index_madd_cry_1_0       CCU2D        COUT     Out     1.545     6.899       -         
+un3_first_bit_index_madd_cry_2         Net          -        -       -         -           1         
+un3_first_bit_index_madd_cry_3_0       CCU2D        CIN      In      0.000     6.899       -         
+un3_first_bit_index_madd_cry_3_0       CCU2D        S0       Out     1.549     8.448       -         
+un3_first_bit_index[5]                 Net          -        -       -         -           1         
+un2_first_bit_index_cry_5_0            CCU2D        A0       In      0.000     8.448       -         
+un2_first_bit_index_cry_5_0            CCU2D        COUT     Out     1.545     9.992       -         
+un2_first_bit_index_cry_6              Net          -        -       -         -           1         
+un2_first_bit_index_s_7_0              CCU2D        CIN      In      0.000     9.992       -         
+un2_first_bit_index_s_7_0              CCU2D        S0       Out     1.549     11.541      -         
+un2_first_bit_index_s_7_0_S0           Net          -        -       -         -           1         
+first_bit_index[11]                    FD1P3DX      D        In      0.000     11.541      -         
+=====================================================================================================
+
+
+Path information for path number 5: 
+      Requested Period:                      9.961
+    - Setup time:                            0.472
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         9.489
+
+    - Propagation time:                      10.814
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (non-critical) :                 -1.324
+
+    Number of logic level(s):                10
+    Starting point:                          num_modules_x_fast[0] / Q
+    Ending point:                            led_clk_en / SP
+    The start point is clocked by            i2s_mask|i2s_clk [rising] on pin CK
+    The end   point is clocked by            i2s_mask|i2s_clk [rising] on pin CK
+
+Instance / Net                                              Pin      Pin               Arrival     No. of    
+Name                                           Type         Name     Dir     Delay     Time        Fan Out(s)
+-------------------------------------------------------------------------------------------------------------
+num_modules_x_fast[0]                          FD1P3AX      Q        Out     1.180     1.180       -         
+num_modules_x_fast[0]                          Net          -        -       -         -           5         
+num_modules_x_fast_RNIVVGS[1]                  ORCALUT4     A        In      0.000     1.180       -         
+num_modules_x_fast_RNIVVGS[1]                  ORCALUT4     Z        Out     1.313     2.493       -         
+un3_last_bit_index_madd_1                      Net          -        -       -         -           17        
+un1_first_bit_index_0_cry_1_0                  CCU2D        C1       In      0.000     2.493       -         
+un1_first_bit_index_0_cry_1_0                  CCU2D        COUT     Out     1.545     4.037       -         
+un1_first_bit_index_0_cry_2                    Net          -        -       -         -           1         
+un1_first_bit_index_0_cry_3_0                  CCU2D        CIN      In      0.000     4.037       -         
+un1_first_bit_index_0_cry_3_0                  CCU2D        COUT     Out     0.143     4.180       -         
+un1_first_bit_index_0_cry_4                    Net          -        -       -         -           1         
+un1_first_bit_index_0_cry_5_0                  CCU2D        CIN      In      0.000     4.180       -         
+un1_first_bit_index_0_cry_5_0                  CCU2D        COUT     Out     0.143     4.323       -         
+un1_first_bit_index_0_cry_6                    Net          -        -       -         -           1         
+un1_first_bit_index_0_cry_7_0                  CCU2D        CIN      In      0.000     4.323       -         
+un1_first_bit_index_0_cry_7_0                  CCU2D        S0       Out     1.549     5.872       -         
+un1_first_bit_index_70[9]                      Net          -        -       -         -           1         
+un1_first_bit_index_7_m_i_m2[7]                ORCALUT4     D        In      0.000     5.872       -         
+un1_first_bit_index_7_m_i_m2[7]                ORCALUT4     Z        Out     1.017     6.888       -         
+un1_first_bit_index_7[9]                       Net          -        -       -         -           1         
+proc_stream_l3\.led_clk_en51_0_I_21_0          CCU2D        A1       In      0.000     6.888       -         
+proc_stream_l3\.led_clk_en51_0_I_21_0          CCU2D        COUT     Out     1.545     8.433       -         
+proc_stream_l3\.led_clk_en51_0_data_tmp[4]     Net          -        -       -         -           1         
+proc_stream_l3\.led_clk_en51_0_I_9_0           CCU2D        CIN      In      0.000     8.433       -         
+proc_stream_l3\.led_clk_en51_0_I_9_0           CCU2D        COUT     Out     0.143     8.576       -         
+proc_stream_l3\.led_clk_en51_0_I_39_cry        Net          -        -       -         -           1         
+proc_stream_l3\.led_clk_en51_0_I_39_0          CCU2D        CIN      In      0.000     8.576       -         
+proc_stream_l3\.led_clk_en51_0_I_39_0          CCU2D        S0       Out     1.621     10.197      -         
+proc_stream_l3\.led_clk_en51_0_N_2             Net          -        -       -         -           2         
+led_clk_en_RNO_0                               ORCALUT4     C        In      0.000     10.197      -         
+led_clk_en_RNO_0                               ORCALUT4     Z        Out     0.617     10.814      -         
+un1_led_clk_en_2_sqmuxa_i[0]                   Net          -        -       -         -           1         
+led_clk_en                                     FD1P3DX      SP       In      0.000     10.814      -         
+=============================================================================================================
+
+
+
+##### END OF TIMING REPORT #####]
+
+
+Finished final timing analysis (Real Time elapsed 0h:00m:07s; CPU Time elapsed 0h:00m:04s; Memory used current: 144MB peak: 147MB)
+
+
+Finished timing report (Real Time elapsed 0h:00m:07s; CPU Time elapsed 0h:00m:04s; Memory used current: 144MB peak: 147MB)
+
+---------------------------------------
+Resource Usage Report
+Part: lcmxo2_7000hc-4
+
+Register bits: 65 of 6864 (1%)
+PIC Latch:       0
+I/O cells:       21
+
+
+Details:
+CCU2D:          123
+FD1P3AX:        19
+FD1P3BX:        1
+FD1P3DX:        22
+FD1S3BX:        1
+FD1S3DX:        13
+GSR:            1
+IB:             11
+IFS1P3DX:       2
+INV:            1
+OB:             10
+OFS1P3DX:       7
+ORCALUT4:       130
+PUR:            1
+VHI:            1
+VLO:            1
+Mapper successful!
+
+At Mapper Exit (Real Time elapsed 0h:00m:07s; CPU Time elapsed 0h:00m:04s; Memory used current: 54MB peak: 147MB)
+
+Process took 0h:00m:07s realtime, 0h:00m:04s cputime
+# Sat Apr 23 16:42:07 2016
 
 ###########################################################]

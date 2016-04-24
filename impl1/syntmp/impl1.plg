@@ -1,0 +1,14 @@
+@P:  Worst Slack : -1.758
+@P:  i2s_mask|i2s_clk - Estimated Frequency : 85.3 MHz
+@P:  i2s_mask|i2s_clk - Requested Frequency : 100.4 MHz
+@P:  i2s_mask|i2s_clk - Estimated Period : 11.719
+@P:  i2s_mask|i2s_clk - Requested Period : 9.961
+@P:  i2s_mask|i2s_clk - Slack : -1.758
+@P:  Worst Slack(min analysis) : 0.584
+@P:  i2s_mask|i2s_clk - Estimated Frequency(min analysis) : 85.3 MHz
+@P:  i2s_mask|i2s_clk - Requested Frequency(min analysis) : 100.4 MHz
+@P:  i2s_mask|i2s_clk - Estimated Period(min analysis) : 11.719
+@P:  i2s_mask|i2s_clk - Requested Period(min analysis) : 9.961
+@P:  i2s_mask|i2s_clk - Slack(min analysis) : -1.758
+@P:  Total Area : 131.0
+@P:  CPU Time : 0h:00m:04s

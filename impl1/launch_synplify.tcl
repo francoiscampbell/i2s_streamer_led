@@ -1,6 +1,6 @@
 #-- Lattice Semiconductor Corporation Ltd.
 #-- Synplify OEM project file C:/Users/Francois Campbell/GoogleDrive/Electronics/LatticeDiamond/i2s_mask/impl1/launch_synplify.tcl
-#-- Written on Sat Apr 23 16:31:14 2016
+#-- Written on Sat Apr 23 16:41:38 2016
 
 project -close
 set filename "C:/Users/Francois Campbell/GoogleDrive/Electronics/LatticeDiamond/i2s_mask/impl1/impl1_syn.prj"

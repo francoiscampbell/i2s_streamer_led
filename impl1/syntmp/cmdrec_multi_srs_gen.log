@@ -1,0 +1,7 @@
+C:\Program Files\Lattice\diamond\3.6_x64\synpbase\bin64\syn_nfilter.exe  -link  -multisrs  "C:\Users\Francois Campbell\GoogleDrive\Electronics\LatticeDiamond\i2s_mask\impl1\synwork\impl1_comp.srs"  -osyn  "C:\Users\Francois Campbell\GoogleDrive\Electronics\LatticeDiamond\i2s_mask\impl1\synwork\impl1_mult.srs"  -log  "C:\Users\Francois Campbell\GoogleDrive\Electronics\LatticeDiamond\i2s_mask\impl1\synlog\impl1_multi_srs_gen.srr" 
+rc:0 success:1
+C:\Users\Francois Campbell\GoogleDrive\Electronics\LatticeDiamond\i2s_mask\impl1\synwork\impl1_comp.srs|i|1461444115|5774
+C:\Users\Francois Campbell\GoogleDrive\Electronics\LatticeDiamond\i2s_mask\impl1\synwork\impl1_mult.srs|o|1461444117|5867
+C:\Users\Francois Campbell\GoogleDrive\Electronics\LatticeDiamond\i2s_mask\impl1\synlog\impl1_multi_srs_gen.srr|o|1461444117|723
+C:\Program Files\Lattice\diamond\3.6_x64\synpbase\bin\syn_nfilter.exe|i|1439970412|3007488
+C:\Program Files\Lattice\diamond\3.6_x64\synpbase\bin64\syn_nfilter.exe|i|1439970598|3974144

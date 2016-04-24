@@ -1,7 +1,16 @@
 Selecting top level module i2s_mask
 @N: CG364 :"C:\Users\Francois Campbell\GoogleDrive\Electronics\LatticeDiamond\i2s_mask\i2s_mask.v":1:7:1:14|Synthesizing module i2s_mask
 
-@W: CG136 :"C:\Users\Francois Campbell\GoogleDrive\Electronics\LatticeDiamond\i2s_mask\i2s_mask.v":31:2:31:3|Edge and condition mismatch
 @W: CL271 :"C:\Users\Francois Campbell\GoogleDrive\Electronics\LatticeDiamond\i2s_mask\i2s_mask.v":30:1:30:6|Pruning bits 15 to 6 of header[15:0] -- not in use ...
 
-@E: CL123 :"C:\Users\Francois Campbell\GoogleDrive\Electronics\LatticeDiamond\i2s_mask\i2s_mask.v":30:1:30:6|Logic for header[5:0] does not match a standard flip-flop
+@A: CL282 :"C:\Users\Francois Campbell\GoogleDrive\Electronics\LatticeDiamond\i2s_mask\i2s_mask.v":30:1:30:6|Feedback mux created for signal num_modules_y[3:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A: CL282 :"C:\Users\Francois Campbell\GoogleDrive\Electronics\LatticeDiamond\i2s_mask\i2s_mask.v":30:1:30:6|Feedback mux created for signal num_modules_x[3:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@W: CL113 :"C:\Users\Francois Campbell\GoogleDrive\Electronics\LatticeDiamond\i2s_mask\i2s_mask.v":30:1:30:6|Feedback mux created for signal led_oe.
+@A: CL282 :"C:\Users\Francois Campbell\GoogleDrive\Electronics\LatticeDiamond\i2s_mask\i2s_mask.v":30:1:30:6|Feedback mux created for signal led_lat_needed -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@W: CL251 :"C:\Users\Francois Campbell\GoogleDrive\Electronics\LatticeDiamond\i2s_mask\i2s_mask.v":30:1:30:6|All reachable assignments to led_oe assign 1, register removed by optimization
+@W: CL190 :"C:\Users\Francois Campbell\GoogleDrive\Electronics\LatticeDiamond\i2s_mask\i2s_mask.v":30:1:30:6|Optimizing register bit first_bit_index[0] to a constant 0
+@W: CL190 :"C:\Users\Francois Campbell\GoogleDrive\Electronics\LatticeDiamond\i2s_mask\i2s_mask.v":30:1:30:6|Optimizing register bit first_bit_index[1] to a constant 0
+@W: CL279 :"C:\Users\Francois Campbell\GoogleDrive\Electronics\LatticeDiamond\i2s_mask\i2s_mask.v":30:1:30:6|Pruning register bits 1 to 0 of first_bit_index[11:0] 
+
+@W: CL279 :"C:\Users\Francois Campbell\GoogleDrive\Electronics\LatticeDiamond\i2s_mask\i2s_mask.v":30:1:30:6|Pruning register bits 3 to 1 of last_bit_index[11:0] 
+

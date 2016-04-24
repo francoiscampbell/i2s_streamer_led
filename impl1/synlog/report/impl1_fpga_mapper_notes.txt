@@ -1,0 +1,25 @@
+@N: MF248 |Running in 64-bit mode.
+@N: MF666 |Clock conversion enabled 
+@N: MT206 |Auto Constrain mode is enabled
+@N: MF179 :"c:\users\francois campbell\googledrive\electronics\latticediamond\i2s_mask\i2s_mask.v":70:8:70:76|Found 13 bit by 13 bit '==' comparator, 'proc_stream_l3\.led_clk_en45'
+@N: MF179 :"c:\users\francois campbell\googledrive\electronics\latticediamond\i2s_mask\i2s_mask.v":71:8:71:80|Found 13 bit by 13 bit '==' comparator, 'proc_stream_l3\.led_clk_en51'
+@N: MF179 :"c:\users\francois campbell\googledrive\electronics\latticediamond\i2s_mask\i2s_mask.v":71:8:71:80|Found 13 bit by 13 bit '==' comparator, 'proc_stream_l0\.led_clk_en15'
+@N: MF179 :"c:\users\francois campbell\googledrive\electronics\latticediamond\i2s_mask\i2s_mask.v":70:8:70:76|Found 13 bit by 13 bit '==' comparator, 'proc_stream_l1\.led_clk_en21'
+@N: MF179 :"c:\users\francois campbell\googledrive\electronics\latticediamond\i2s_mask\i2s_mask.v":70:8:70:76|Found 13 bit by 13 bit '==' comparator, 'proc_stream_l2\.led_clk_en33'
+@N: MF179 :"c:\users\francois campbell\googledrive\electronics\latticediamond\i2s_mask\i2s_mask.v":71:8:71:80|Found 13 bit by 13 bit '==' comparator, 'proc_stream_l1\.led_clk_en27'
+@N: MF179 :"c:\users\francois campbell\googledrive\electronics\latticediamond\i2s_mask\i2s_mask.v":71:8:71:80|Found 13 bit by 13 bit '==' comparator, 'proc_stream_l2\.led_clk_en39'
+@N: MF179 :"c:\users\francois campbell\googledrive\electronics\latticediamond\i2s_mask\i2s_mask.v":74:7:74:42|Found 12 bit by 12 bit '==' comparator, 'proc_stream\.current_bit_index24'
+@N: MF179 :"c:\users\francois campbell\googledrive\electronics\latticediamond\i2s_mask\i2s_mask.v":70:8:70:76|Found 12 bit by 12 bit '==' comparator, 'proc_stream_l0\.led_clk_en9'
+@N: FA113 :"c:\users\francois campbell\googledrive\electronics\latticediamond\i2s_mask\i2s_mask.v":63:24:63:75|Pipelining module un2_last_bit_index[11:4]
+@N: MF169 :"c:\users\francois campbell\googledrive\electronics\latticediamond\i2s_mask\i2s_mask.v":30:1:30:6|Register last_bit_index[11:4] pushed in.
+@N: FX404 :"c:\users\francois campbell\googledrive\electronics\latticediamond\i2s_mask\i2s_mask.v":71:29:71:80|Found addmux in view:work.i2s_mask(verilog) inst un1_first_bit_index_7_m_i_m2[10:0] from un1_first_bit_index_1[12:2] 
+@N: FX271 :"c:\users\francois campbell\googledrive\electronics\latticediamond\i2s_mask\i2s_mask.v":30:1:30:6|Instance "num_modules_x[0]" with 49 loads replicated 3 times to improve timing 
+@N: FX271 :"c:\users\francois campbell\googledrive\electronics\latticediamond\i2s_mask\i2s_mask.v":30:1:30:6|Instance "num_modules_x[1]" with 35 loads replicated 3 times to improve timing 
+@N: FX271 :"c:\users\francois campbell\googledrive\electronics\latticediamond\i2s_mask\i2s_mask.v":30:1:30:6|Instance "num_modules_x[2]" with 18 loads replicated 2 times to improve timing 
+@N: FX271 :"c:\users\francois campbell\googledrive\electronics\latticediamond\i2s_mask\i2s_mask.v":30:1:30:6|Instance "num_modules_x[3]" with 23 loads replicated 2 times to improve timing 
+@N: FX164 |The option to pack registers in the IOB has not been specified. Please set syn_useioff attribute.  
+@N: BW106 |Synplicity Constraint File capacitance units using default value of 1pF 
+@N: MT320 |Timing report estimates place and route data. Please look at the place and route timing report for final timing.
+@N: MT322 |Clock constraints cover only FF-to-FF paths associated with the clock.
+@N: MT320 |Timing report estimates place and route data. Please look at the place and route timing report for final timing.
+@N: MT322 |Clock constraints cover only FF-to-FF paths associated with the clock.

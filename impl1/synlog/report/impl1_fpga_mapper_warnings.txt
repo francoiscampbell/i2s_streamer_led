@@ -1,0 +1,1 @@
+@W: MT420 |Found inferred clock i2s_mask|i2s_clk with period 9.96ns. Please declare a user-defined clock on object "p:i2s_clk"

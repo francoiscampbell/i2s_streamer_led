@@ -3,4 +3,7 @@
 @N:: Running Verilog Compiler in System Verilog mode
 @N:: Running Verilog Compiler in Multiple File Compilation Unit mode
 @N: CG364 :"C:\Users\Francois Campbell\GoogleDrive\Electronics\LatticeDiamond\i2s_mask\i2s_mask.v":1:7:1:14|Synthesizing module i2s_mask
+@N|Running in 64-bit mode
+@N: NF107 :"C:\Users\Francois Campbell\GoogleDrive\Electronics\LatticeDiamond\i2s_mask\i2s_mask.v":1:7:1:14|Selected library: work cell: i2s_mask view verilog as top level
+@N: NF107 :"C:\Users\Francois Campbell\GoogleDrive\Electronics\LatticeDiamond\i2s_mask\i2s_mask.v":1:7:1:14|Selected library: work cell: i2s_mask view verilog as top level
 

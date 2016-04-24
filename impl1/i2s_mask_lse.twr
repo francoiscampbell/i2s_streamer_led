@@ -1,6 +1,6 @@
 --------------------------------------------------------------------------------
 Lattice Synthesis Timing Report, Version  
-Sat Apr 23 16:29:02 2016
+Sat Apr 23 16:41:21 2016
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -18,368 +18,167 @@ Report level:    verbose report, limited to 3 items per constraint
 
 
 ================================================================================
-Constraint: create_clock -period 1000.000000 -name clk1 [get_nets current_bit_index_11__N_47]
-            4096 items scored, 0 timing errors detected.
---------------------------------------------------------------------------------
-
-
-Passed:  The following path meets requirements by 979.525ns
-
- Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
-
-   Source:         FD1S1D     CK             i931  (from current_bit_index_11__N_47 +)
-   Destination:    FD1S1D     CD             i739  (to current_bit_index_11__N_47 +)
-
-   Delay:                  20.315ns  (42.0% logic, 58.0% route), 18 logic levels.
-
- Constraint Details:
-
-     20.315ns data_path i931 to i739 meets
-    1000.000ns delay constraint less
-      0.160ns L_S requirement (totaling 999.840ns) by 979.525ns
-
- Path Details: i931 to i739
-
-   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
-L_CO        ---     0.444             CK to Q              i931 (from current_bit_index_11__N_47)
-Route         3   e 1.315                                  i2s_clk_c_enable_4
-LUT4        ---     0.493              C to Z              i934_3_lut
-Route        29   e 2.034                                  num_modules_x[1]
-LUT4        ---     0.493              D to Z              i655_2_lut_rep_146_4_lut
-Route        12   e 1.657                                  n3781
-LUT4        ---     0.493              B to Z              i1637_4_lut_3_lut_rep_122_4_lut
-Route         2   e 1.141                                  n3757
-LUT4        ---     0.493              B to Z              i1656_2_lut_4_lut
-Route         1   e 0.941                                  n3189
-A1_TO_FCO   ---     0.827           B[2] to COUT           add_562_7
-Route         1   e 0.020                                  n3253
-FCI_TO_F    ---     0.598            CIN to S[2]           add_562_9
-Route         2   e 1.486                                  led_clk_en_N_672[9]
-A1_TO_FCO   ---     0.827           A[2] to COUT           add_563_9
-Route         1   e 0.020                                  n3248
-FCI_TO_FCO  ---     0.157            CIN to COUT           add_563_11
-Route         1   e 0.020                                  n3249
-FCI_TO_F    ---     0.598            CIN to S[2]           add_563_cout
-Route         1   e 0.020                                  led_clk_en_N_705[13]
-A1_TO_FCO   ---     0.827           A[2] to COUT           equal_592_0
-Route         1   e 0.020                                  n2865
-FCI_TO_FCO  ---     0.157            CIN to COUT           equal_592_10
-Route         1   e 0.020                                  n2866
-FCI_TO_FCO  ---     0.157            CIN to COUT           equal_592_12
-Route         1   e 0.020                                  n2867
-FCI_TO_FCO  ---     0.157            CIN to COUT           equal_592_14_1361
-Route         1   e 0.020                                  n2868
-FCI_TO_F    ---     0.598            CIN to S[2]           equal_592_14
-Route         1   e 0.941                                  led_clk_en_N_704
-LUT4        ---     0.493              B to Z              i79_4_lut
-Route         1   e 0.020                                  n69
-MUXL5       ---     0.233           BLUT to Z              i1266
-Route         2   e 1.141                                  n2754
-LUT4        ---     0.493              B to Z              i1_2_lut
-Route         1   e 0.941                                  led_clk_en_N_738
-                  --------
-                   20.315  (42.0% logic, 58.0% route), 18 logic levels.
-
-
-Passed:  The following path meets requirements by 979.525ns
-
- Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
-
-   Source:         FD1S1D     CK             i931  (from current_bit_index_11__N_47 +)
-   Destination:    FD1S1D     CD             i739  (to current_bit_index_11__N_47 +)
-
-   Delay:                  20.315ns  (42.0% logic, 58.0% route), 18 logic levels.
-
- Constraint Details:
-
-     20.315ns data_path i931 to i739 meets
-    1000.000ns delay constraint less
-      0.160ns L_S requirement (totaling 999.840ns) by 979.525ns
-
- Path Details: i931 to i739
-
-   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
-L_CO        ---     0.444             CK to Q              i931 (from current_bit_index_11__N_47)
-Route         3   e 1.315                                  i2s_clk_c_enable_4
-LUT4        ---     0.493              C to Z              i934_3_lut
-Route        29   e 2.034                                  num_modules_x[1]
-LUT4        ---     0.493              D to Z              i655_2_lut_rep_146_4_lut
-Route        12   e 1.657                                  n3781
-LUT4        ---     0.493              B to Z              i1637_4_lut_3_lut_rep_122_4_lut
-Route         2   e 1.141                                  n3757
-LUT4        ---     0.493              B to Z              i1656_2_lut_4_lut
-Route         1   e 0.941                                  n3189
-A1_TO_FCO   ---     0.827           B[2] to COUT           add_562_7
-Route         1   e 0.020                                  n3253
-FCI_TO_FCO  ---     0.157            CIN to COUT           add_562_9
-Route         1   e 0.020                                  n3254
-FCI_TO_F    ---     0.598            CIN to S[2]           add_562_11
-Route         2   e 1.486                                  led_clk_en_N_672[12]
-A1_TO_FCO   ---     0.827           A[2] to COUT           add_563_11
-Route         1   e 0.020                                  n3249
-FCI_TO_F    ---     0.598            CIN to S[2]           add_563_cout
-Route         1   e 0.020                                  led_clk_en_N_705[13]
-A1_TO_FCO   ---     0.827           A[2] to COUT           equal_592_0
-Route         1   e 0.020                                  n2865
-FCI_TO_FCO  ---     0.157            CIN to COUT           equal_592_10
-Route         1   e 0.020                                  n2866
-FCI_TO_FCO  ---     0.157            CIN to COUT           equal_592_12
-Route         1   e 0.020                                  n2867
-FCI_TO_FCO  ---     0.157            CIN to COUT           equal_592_14_1361
-Route         1   e 0.020                                  n2868
-FCI_TO_F    ---     0.598            CIN to S[2]           equal_592_14
-Route         1   e 0.941                                  led_clk_en_N_704
-LUT4        ---     0.493              B to Z              i79_4_lut
-Route         1   e 0.020                                  n69
-MUXL5       ---     0.233           BLUT to Z              i1266
-Route         2   e 1.141                                  n2754
-LUT4        ---     0.493              B to Z              i1_2_lut
-Route         1   e 0.941                                  led_clk_en_N_738
-                  --------
-                   20.315  (42.0% logic, 58.0% route), 18 logic levels.
-
-
-Passed:  The following path meets requirements by 979.525ns
-
- Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
-
-   Source:         FD1S1D     CK             i931  (from current_bit_index_11__N_47 +)
-   Destination:    FD1S1D     CD             i739  (to current_bit_index_11__N_47 +)
-
-   Delay:                  20.315ns  (42.0% logic, 58.0% route), 18 logic levels.
-
- Constraint Details:
-
-     20.315ns data_path i931 to i739 meets
-    1000.000ns delay constraint less
-      0.160ns L_S requirement (totaling 999.840ns) by 979.525ns
-
- Path Details: i931 to i739
-
-   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
-L_CO        ---     0.444             CK to Q              i931 (from current_bit_index_11__N_47)
-Route         3   e 1.315                                  i2s_clk_c_enable_4
-LUT4        ---     0.493              C to Z              i934_3_lut
-Route        29   e 2.034                                  num_modules_x[1]
-LUT4        ---     0.493              D to Z              i655_2_lut_rep_146_4_lut
-Route        12   e 1.657                                  n3781
-LUT4        ---     0.493              B to Z              i1637_4_lut_3_lut_rep_122_4_lut
-Route         2   e 1.141                                  n3757
-LUT4        ---     0.493              B to Z              i1656_2_lut_4_lut
-Route         1   e 0.941                                  n3189
-A1_TO_FCO   ---     0.827           B[2] to COUT           add_562_7
-Route         1   e 0.020                                  n3253
-FCI_TO_F    ---     0.598            CIN to S[2]           add_562_9
-Route         2   e 1.486                                  led_clk_en_N_672[10]
-A1_TO_FCO   ---     0.827           A[2] to COUT           add_563_9
-Route         1   e 0.020                                  n3248
-FCI_TO_FCO  ---     0.157            CIN to COUT           add_563_11
-Route         1   e 0.020                                  n3249
-FCI_TO_F    ---     0.598            CIN to S[2]           add_563_cout
-Route         1   e 0.020                                  led_clk_en_N_705[13]
-A1_TO_FCO   ---     0.827           A[2] to COUT           equal_592_0
-Route         1   e 0.020                                  n2865
-FCI_TO_FCO  ---     0.157            CIN to COUT           equal_592_10
-Route         1   e 0.020                                  n2866
-FCI_TO_FCO  ---     0.157            CIN to COUT           equal_592_12
-Route         1   e 0.020                                  n2867
-FCI_TO_FCO  ---     0.157            CIN to COUT           equal_592_14_1361
-Route         1   e 0.020                                  n2868
-FCI_TO_F    ---     0.598            CIN to S[2]           equal_592_14
-Route         1   e 0.941                                  led_clk_en_N_704
-LUT4        ---     0.493              B to Z              i79_4_lut
-Route         1   e 0.020                                  n69
-MUXL5       ---     0.233           BLUT to Z              i1266
-Route         2   e 1.141                                  n2754
-LUT4        ---     0.493              B to Z              i1_2_lut
-Route         1   e 0.941                                  led_clk_en_N_738
-                  --------
-                   20.315  (42.0% logic, 58.0% route), 18 logic levels.
-
-Report: 20.475 ns is the maximum delay for this constraint.
-
-
-
-================================================================================
 Constraint: create_clock -period 1000.000000 -name clk0 [get_nets i2s_clk_c]
             4096 items scored, 0 timing errors detected.
 --------------------------------------------------------------------------------
 
 
-Passed:  The following path meets requirements by 979.325ns
+Passed:  The following path meets requirements by 982.549ns
 
  Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
 
-   Source:         FD1S1D     CK             i931  (from current_bit_index_11__N_47 +)
-   Destination:    FD1S3BX    PD             led_clk_en_108_740_741_set  (to i2s_clk_c +)
+   Source:         FD1P3AX    CK             num_modules_x_i0_i0  (from i2s_clk_c +)
+   Destination:    FD1P3AX    SP             led_clk_en_106  (to i2s_clk_c +)
 
-   Delay:                  20.515ns  (41.6% logic, 58.4% route), 18 logic levels.
+   Delay:                  17.166ns  (42.6% logic, 57.4% route), 15 logic levels.
 
  Constraint Details:
 
-     20.515ns data_path i931 to led_clk_en_108_740_741_set meets
+     17.166ns data_path num_modules_x_i0_i0 to led_clk_en_106 meets
     1000.000ns delay constraint less
-      0.160ns L_S requirement (totaling 999.840ns) by 979.325ns
+      0.285ns LCE_S requirement (totaling 999.715ns) by 982.549ns
 
- Path Details: i931 to led_clk_en_108_740_741_set
+ Path Details: num_modules_x_i0_i0 to led_clk_en_106
 
    Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
-L_CO        ---     0.444             CK to Q              i931 (from current_bit_index_11__N_47)
-Route         3   e 1.315                                  i2s_clk_c_enable_4
-LUT4        ---     0.493              C to Z              i934_3_lut
-Route        29   e 2.034                                  num_modules_x[1]
-LUT4        ---     0.493              D to Z              i655_2_lut_rep_146_4_lut
-Route        12   e 1.657                                  n3781
-LUT4        ---     0.493              B to Z              i1637_4_lut_3_lut_rep_122_4_lut
-Route         2   e 1.141                                  n3757
-LUT4        ---     0.493              B to Z              i1656_2_lut_4_lut
-Route         1   e 0.941                                  n3189
-A1_TO_FCO   ---     0.827           B[2] to COUT           add_562_7
-Route         1   e 0.020                                  n3253
-FCI_TO_F    ---     0.598            CIN to S[2]           add_562_9
-Route         2   e 1.486                                  led_clk_en_N_672[9]
-A1_TO_FCO   ---     0.827           A[2] to COUT           add_563_9
-Route         1   e 0.020                                  n3248
-FCI_TO_FCO  ---     0.157            CIN to COUT           add_563_11
-Route         1   e 0.020                                  n3249
-FCI_TO_F    ---     0.598            CIN to S[2]           add_563_cout
-Route         1   e 0.020                                  led_clk_en_N_705[13]
-A1_TO_FCO   ---     0.827           A[2] to COUT           equal_592_0
-Route         1   e 0.020                                  n2865
-FCI_TO_FCO  ---     0.157            CIN to COUT           equal_592_10
-Route         1   e 0.020                                  n2866
-FCI_TO_FCO  ---     0.157            CIN to COUT           equal_592_12
-Route         1   e 0.020                                  n2867
-FCI_TO_FCO  ---     0.157            CIN to COUT           equal_592_14_1361
-Route         1   e 0.020                                  n2868
-FCI_TO_F    ---     0.598            CIN to S[2]           equal_592_14
-Route         1   e 0.941                                  led_clk_en_N_704
-LUT4        ---     0.493              B to Z              i79_4_lut
-Route         1   e 0.020                                  n69
-MUXL5       ---     0.233           BLUT to Z              i1266
-Route         2   e 1.141                                  n2754
-LUT4        ---     0.493              B to Z              i2043_2_lut
-Route         2   e 1.141                                  led_clk_en_N_463
+L_CO        ---     0.444             CK to Q              num_modules_x_i0_i0 (from i2s_clk_c)
+Route        46   e 2.118                                  num_modules_x[0]
+LUT4        ---     0.493              B to Z              i317_2_lut_rep_67_3_lut
+Route         9   e 1.574                                  n2801
+LUT4        ---     0.493              C to Z              i798_4_lut_3_lut_rep_42_4_lut
+Route         2   e 1.141                                  n2776
+A1_TO_FCO   ---     0.827           B[2] to COUT           add_213_5
+Route         1   e 0.020                                  n2516
+FCI_TO_F    ---     0.598            CIN to S[2]           add_213_7
+Route         2   e 1.486                                  led_clk_en_N_361[7]
+A1_TO_FCO   ---     0.827           A[2] to COUT           add_214_7
+Route         1   e 0.020                                  n2511
+FCI_TO_FCO  ---     0.157            CIN to COUT           add_214_9
+Route         1   e 0.020                                  n2512
+FCI_TO_FCO  ---     0.157            CIN to COUT           add_214_11
+Route         1   e 0.020                                  n2513
+FCI_TO_F    ---     0.598            CIN to S[2]           add_214_cout
+Route         1   e 0.020                                  led_clk_en_N_394[13]
+A1_TO_FCO   ---     0.827           A[2] to COUT           equal_237_0
+Route         1   e 0.020                                  n2130
+FCI_TO_FCO  ---     0.157            CIN to COUT           equal_237_11
+Route         1   e 0.020                                  n2131
+FCI_TO_FCO  ---     0.157            CIN to COUT           equal_237_13
+Route         1   e 0.020                                  n2132
+FCI_TO_F    ---     0.598            CIN to S[2]           equal_237_14
+Route         2   e 1.486                                  led_clk_en_N_393
+LUT4        ---     0.493              D to Z              i6_4_lut
+Route         1   e 0.941                                  n14
+LUT4        ---     0.493              D to Z              i21_4_lut
+Route         1   e 0.941                                  i2s_clk_c_enable_18
                   --------
-                   20.515  (41.6% logic, 58.4% route), 18 logic levels.
+                   17.166  (42.6% logic, 57.4% route), 15 logic levels.
 
 
-Passed:  The following path meets requirements by 979.325ns
+Passed:  The following path meets requirements by 982.549ns
 
  Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
 
-   Source:         FD1S1D     CK             i931  (from current_bit_index_11__N_47 +)
-   Destination:    FD1S3BX    PD             led_clk_en_108_740_741_set  (to i2s_clk_c +)
+   Source:         FD1P3AX    CK             num_modules_x_i0_i0  (from i2s_clk_c +)
+   Destination:    FD1P3AX    SP             led_clk_en_106  (to i2s_clk_c +)
 
-   Delay:                  20.515ns  (41.6% logic, 58.4% route), 18 logic levels.
+   Delay:                  17.166ns  (42.6% logic, 57.4% route), 15 logic levels.
 
  Constraint Details:
 
-     20.515ns data_path i931 to led_clk_en_108_740_741_set meets
+     17.166ns data_path num_modules_x_i0_i0 to led_clk_en_106 meets
     1000.000ns delay constraint less
-      0.160ns L_S requirement (totaling 999.840ns) by 979.325ns
+      0.285ns LCE_S requirement (totaling 999.715ns) by 982.549ns
 
- Path Details: i931 to led_clk_en_108_740_741_set
+ Path Details: num_modules_x_i0_i0 to led_clk_en_106
 
    Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
-L_CO        ---     0.444             CK to Q              i931 (from current_bit_index_11__N_47)
-Route         3   e 1.315                                  i2s_clk_c_enable_4
-LUT4        ---     0.493              C to Z              i934_3_lut
-Route        29   e 2.034                                  num_modules_x[1]
-LUT4        ---     0.493              D to Z              i655_2_lut_rep_146_4_lut
-Route        12   e 1.657                                  n3781
-LUT4        ---     0.493              B to Z              i1637_4_lut_3_lut_rep_122_4_lut
-Route         2   e 1.141                                  n3757
-LUT4        ---     0.493              B to Z              i1656_2_lut_4_lut
-Route         1   e 0.941                                  n3189
-A1_TO_FCO   ---     0.827           B[2] to COUT           add_562_7
-Route         1   e 0.020                                  n3253
-FCI_TO_F    ---     0.598            CIN to S[2]           add_562_9
-Route         2   e 1.486                                  led_clk_en_N_672[10]
-A1_TO_FCO   ---     0.827           A[2] to COUT           add_563_9
-Route         1   e 0.020                                  n3248
-FCI_TO_FCO  ---     0.157            CIN to COUT           add_563_11
-Route         1   e 0.020                                  n3249
-FCI_TO_F    ---     0.598            CIN to S[2]           add_563_cout
-Route         1   e 0.020                                  led_clk_en_N_705[13]
-A1_TO_FCO   ---     0.827           A[2] to COUT           equal_592_0
-Route         1   e 0.020                                  n2865
-FCI_TO_FCO  ---     0.157            CIN to COUT           equal_592_10
-Route         1   e 0.020                                  n2866
-FCI_TO_FCO  ---     0.157            CIN to COUT           equal_592_12
-Route         1   e 0.020                                  n2867
-FCI_TO_FCO  ---     0.157            CIN to COUT           equal_592_14_1361
-Route         1   e 0.020                                  n2868
-FCI_TO_F    ---     0.598            CIN to S[2]           equal_592_14
-Route         1   e 0.941                                  led_clk_en_N_704
-LUT4        ---     0.493              B to Z              i79_4_lut
-Route         1   e 0.020                                  n69
-MUXL5       ---     0.233           BLUT to Z              i1266
-Route         2   e 1.141                                  n2754
-LUT4        ---     0.493              B to Z              i2043_2_lut
-Route         2   e 1.141                                  led_clk_en_N_463
+L_CO        ---     0.444             CK to Q              num_modules_x_i0_i0 (from i2s_clk_c)
+Route        46   e 2.118                                  num_modules_x[0]
+LUT4        ---     0.493              B to Z              i317_2_lut_rep_67_3_lut
+Route         9   e 1.574                                  n2801
+LUT4        ---     0.493              C to Z              i798_4_lut_3_lut_rep_42_4_lut
+Route         2   e 1.141                                  n2776
+A1_TO_FCO   ---     0.827           B[2] to COUT           add_213_5
+Route         1   e 0.020                                  n2516
+FCI_TO_FCO  ---     0.157            CIN to COUT           add_213_7
+Route         1   e 0.020                                  n2517
+FCI_TO_FCO  ---     0.157            CIN to COUT           add_213_9
+Route         1   e 0.020                                  n2518
+FCI_TO_F    ---     0.598            CIN to S[2]           add_213_11
+Route         2   e 1.486                                  led_clk_en_N_361[11]
+A1_TO_FCO   ---     0.827           A[2] to COUT           add_214_11
+Route         1   e 0.020                                  n2513
+FCI_TO_F    ---     0.598            CIN to S[2]           add_214_cout
+Route         1   e 0.020                                  led_clk_en_N_394[13]
+A1_TO_FCO   ---     0.827           A[2] to COUT           equal_237_0
+Route         1   e 0.020                                  n2130
+FCI_TO_FCO  ---     0.157            CIN to COUT           equal_237_11
+Route         1   e 0.020                                  n2131
+FCI_TO_FCO  ---     0.157            CIN to COUT           equal_237_13
+Route         1   e 0.020                                  n2132
+FCI_TO_F    ---     0.598            CIN to S[2]           equal_237_14
+Route         2   e 1.486                                  led_clk_en_N_393
+LUT4        ---     0.493              D to Z              i6_4_lut
+Route         1   e 0.941                                  n14
+LUT4        ---     0.493              D to Z              i21_4_lut
+Route         1   e 0.941                                  i2s_clk_c_enable_18
                   --------
-                   20.515  (41.6% logic, 58.4% route), 18 logic levels.
+                   17.166  (42.6% logic, 57.4% route), 15 logic levels.
 
 
-Passed:  The following path meets requirements by 979.325ns
+Passed:  The following path meets requirements by 982.549ns
 
  Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
 
-   Source:         FD1S1D     CK             i931  (from current_bit_index_11__N_47 +)
-   Destination:    FD1S3BX    PD             led_clk_en_108_740_741_set  (to i2s_clk_c +)
+   Source:         FD1P3AX    CK             num_modules_x_i0_i0  (from i2s_clk_c +)
+   Destination:    FD1P3AX    SP             led_clk_en_106  (to i2s_clk_c +)
 
-   Delay:                  20.515ns  (41.6% logic, 58.4% route), 18 logic levels.
+   Delay:                  17.166ns  (42.6% logic, 57.4% route), 15 logic levels.
 
  Constraint Details:
 
-     20.515ns data_path i931 to led_clk_en_108_740_741_set meets
+     17.166ns data_path num_modules_x_i0_i0 to led_clk_en_106 meets
     1000.000ns delay constraint less
-      0.160ns L_S requirement (totaling 999.840ns) by 979.325ns
+      0.285ns LCE_S requirement (totaling 999.715ns) by 982.549ns
 
- Path Details: i931 to led_clk_en_108_740_741_set
+ Path Details: num_modules_x_i0_i0 to led_clk_en_106
 
    Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
-L_CO        ---     0.444             CK to Q              i931 (from current_bit_index_11__N_47)
-Route         3   e 1.315                                  i2s_clk_c_enable_4
-LUT4        ---     0.493              C to Z              i934_3_lut
-Route        29   e 2.034                                  num_modules_x[1]
-LUT4        ---     0.493              D to Z              i655_2_lut_rep_146_4_lut
-Route        12   e 1.657                                  n3781
-LUT4        ---     0.493              B to Z              i1637_4_lut_3_lut_rep_122_4_lut
-Route         2   e 1.141                                  n3757
-LUT4        ---     0.493              B to Z              i1656_2_lut_4_lut
-Route         1   e 0.941                                  n3189
-A1_TO_FCO   ---     0.827           B[2] to COUT           add_562_7
-Route         1   e 0.020                                  n3253
-FCI_TO_FCO  ---     0.157            CIN to COUT           add_562_9
-Route         1   e 0.020                                  n3254
-FCI_TO_F    ---     0.598            CIN to S[2]           add_562_11
-Route         2   e 1.486                                  led_clk_en_N_672[12]
-A1_TO_FCO   ---     0.827           A[2] to COUT           add_563_11
-Route         1   e 0.020                                  n3249
-FCI_TO_F    ---     0.598            CIN to S[2]           add_563_cout
-Route         1   e 0.020                                  led_clk_en_N_705[13]
-A1_TO_FCO   ---     0.827           A[2] to COUT           equal_592_0
-Route         1   e 0.020                                  n2865
-FCI_TO_FCO  ---     0.157            CIN to COUT           equal_592_10
-Route         1   e 0.020                                  n2866
-FCI_TO_FCO  ---     0.157            CIN to COUT           equal_592_12
-Route         1   e 0.020                                  n2867
-FCI_TO_FCO  ---     0.157            CIN to COUT           equal_592_14_1361
-Route         1   e 0.020                                  n2868
-FCI_TO_F    ---     0.598            CIN to S[2]           equal_592_14
-Route         1   e 0.941                                  led_clk_en_N_704
-LUT4        ---     0.493              B to Z              i79_4_lut
-Route         1   e 0.020                                  n69
-MUXL5       ---     0.233           BLUT to Z              i1266
-Route         2   e 1.141                                  n2754
-LUT4        ---     0.493              B to Z              i2043_2_lut
-Route         2   e 1.141                                  led_clk_en_N_463
+L_CO        ---     0.444             CK to Q              num_modules_x_i0_i0 (from i2s_clk_c)
+Route        46   e 2.118                                  num_modules_x[0]
+LUT4        ---     0.493              B to Z              i317_2_lut_rep_67_3_lut
+Route         9   e 1.574                                  n2801
+LUT4        ---     0.493              C to Z              i798_4_lut_3_lut_rep_42_4_lut
+Route         2   e 1.141                                  n2776
+A1_TO_FCO   ---     0.827           B[2] to COUT           add_213_5
+Route         1   e 0.020                                  n2516
+FCI_TO_F    ---     0.598            CIN to S[2]           add_213_7
+Route         2   e 1.486                                  led_clk_en_N_361[8]
+A1_TO_FCO   ---     0.827           A[2] to COUT           add_214_7
+Route         1   e 0.020                                  n2511
+FCI_TO_FCO  ---     0.157            CIN to COUT           add_214_9
+Route         1   e 0.020                                  n2512
+FCI_TO_FCO  ---     0.157            CIN to COUT           add_214_11
+Route         1   e 0.020                                  n2513
+FCI_TO_F    ---     0.598            CIN to S[2]           add_214_cout
+Route         1   e 0.020                                  led_clk_en_N_394[13]
+A1_TO_FCO   ---     0.827           A[2] to COUT           equal_237_0
+Route         1   e 0.020                                  n2130
+FCI_TO_FCO  ---     0.157            CIN to COUT           equal_237_11
+Route         1   e 0.020                                  n2131
+FCI_TO_FCO  ---     0.157            CIN to COUT           equal_237_13
+Route         1   e 0.020                                  n2132
+FCI_TO_F    ---     0.598            CIN to S[2]           equal_237_14
+Route         2   e 1.486                                  led_clk_en_N_393
+LUT4        ---     0.493              D to Z              i6_4_lut
+Route         1   e 0.941                                  n14
+LUT4        ---     0.493              D to Z              i21_4_lut
+Route         1   e 0.941                                  i2s_clk_c_enable_18
                   --------
-                   20.515  (41.6% logic, 58.4% route), 18 logic levels.
+                   17.166  (42.6% logic, 57.4% route), 15 logic levels.
 
-Report: 20.675 ns is the maximum delay for this constraint.
+Report: 17.451 ns is the maximum delay for this constraint.
 
 
 Timing Report Summary
@@ -389,11 +188,7 @@ Constraint                              |   Constraint|       Actual|Levels
 --------------------------------------------------------------------------------
                                         |             |             |
 create_clock -period 1000.000000 -name  |             |             |
-clk1 [get_nets                          |             |             |
-current_bit_index_11__N_47]             |  1000.000 ns|    20.475 ns|    18  
-                                        |             |             |
-create_clock -period 1000.000000 -name  |             |             |
-clk0 [get_nets i2s_clk_c]               |  1000.000 ns|    20.675 ns|    18  
+clk0 [get_nets i2s_clk_c]               |  1000.000 ns|    17.451 ns|    15  
                                         |             |             |
 --------------------------------------------------------------------------------
 
@@ -407,8 +202,8 @@ Timing summary:
 
 Timing errors: 0  Score: 0
 
-Constraints cover  86835 paths, 642 nets, and 1689 connections (85.5% coverage)
+Constraints cover  18963 paths, 367 nets, and 1018 connections (95.1% coverage)
 
 
-Peak memory: 87957504 bytes, TRCE: 21856256 bytes, DLYMAN: 0 bytes
+Peak memory: 72089600 bytes, TRCE: 6770688 bytes, DLYMAN: 0 bytes
 CPU_TIME_REPORT: 0 secs 

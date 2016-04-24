@@ -19,9 +19,9 @@
             <Task name="PARTrace" build_result="0" update_result="2" update_time="0"/>
             <Task name="IOTiming" build_result="0" update_result="2" update_time="0"/>
         </Milestone>
-        <Milestone name="Synthesis" build_result="2" build_time="1461443344">
-            <Task name="Lattice_Synthesis" build_result="2" update_result="0" update_time="1461443344"/>
-            <Task name="LSE_Compile" build_result="2" update_result="0" update_time="1461443344"/>
+        <Milestone name="Synthesis" build_result="2" build_time="1461444083">
+            <Task name="Lattice_Synthesis" build_result="2" update_result="0" update_time="1461444083"/>
+            <Task name="LSE_Compile" build_result="2" update_result="0" update_time="1461444083"/>
         </Milestone>
         <Milestone name="TOOL_Report" build_result="0" build_time="0">
             <Task name="HDLE" build_result="0" update_result="2" update_time="1461442947"/>
@@ -30,7 +30,7 @@
             <Task name="PIODRC" build_result="0" update_result="2" update_time="0"/>
             <Task name="DEC" build_result="0" update_result="2" update_time="0"/>
         </Milestone>
-        <Report name="i2s_mask_impl1.lsedata" last_build_time="1461443339" last_build_size="370523"/>
-        <Report name="i2s_mask_impl1.ngd" last_build_time="1461443344" last_build_size="344161"/>
+        <Report name="i2s_mask_impl1.lsedata" last_build_time="1461444080" last_build_size="273266"/>
+        <Report name="i2s_mask_impl1.ngd" last_build_time="1461444082" last_build_size="201712"/>
     </Strategy>
 </BuildStatus>

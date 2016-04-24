@@ -1,0 +1,130 @@
+
+
+@S |##### START OF TIMING REPORT #####[
+# Timing Report written on Sat Apr 23 16:42:06 2016
+#
+
+
+Top view:               i2s_mask
+Requested Frequency:    100.4 MHz
+Wire load mode:         top
+Paths requested:        5
+Constraint File(s):    
+@N: MT320 |Timing report estimates place and route data. Please look at the place and route timing report for final timing.
+
+@N: MT322 |Clock constraints cover only FF-to-FF paths associated with the clock.
+
+
+
+Performance Summary 
+*******************
+
+
+Worst slack in design: 0.584
+
+                     Requested     Estimated     Requested     Estimated                Clock        Clock                
+Starting Clock       Frequency     Frequency     Period        Period        Slack      Type         Group                
+--------------------------------------------------------------------------------------------------------------------------
+i2s_mask|i2s_clk     100.4 MHz     85.3 MHz      9.961         11.719        -1.758     inferred     Autoconstr_clkgroup_0
+==========================================================================================================================
+
+
+
+Clock Relationships
+*******************
+
+Clocks                              |    rise  to  rise   |    fall  to  fall   |    rise  to  fall   |    fall  to  rise 
+--------------------------------------------------------------------------------------------------------------------------
+Starting          Ending            |  constraint  slack  |  constraint  slack  |  constraint  slack  |  constraint  slack
+--------------------------------------------------------------------------------------------------------------------------
+i2s_mask|i2s_clk  i2s_mask|i2s_clk  |  0.000       0.584  |  No paths    -      |  No paths    -      |  No paths    -    
+==========================================================================================================================
+ Note: 'No paths' indicates there are no paths in the design for that pair of clock edges.
+       'Diff grp' indicates that paths exist but the starting clock and ending clock are in different clock groups.
+
+
+
+Interface Information 
+*********************
+
+No IO constraint found
+
+
+
+====================================
+Detailed Report for Clock: i2s_mask|i2s_clk
+====================================
+
+
+
+Starting Points with Worst Slack
+********************************
+
+                      Starting                                                       Arrival          
+Instance              Reference            Type        Pin     Net                   Time        Slack
+                      Clock                                                                           
+------------------------------------------------------------------------------------------------------
+reading_header        i2s_mask|i2s_clk     FD1S3BX     Q       reading_header        0.914       0.584
+header[5]             i2s_mask|i2s_clk     FD1P3DX     Q       header[5]             0.680       0.606
+header[4]             i2s_mask|i2s_clk     FD1P3DX     Q       header[4]             0.731       0.657
+led_lat_needed        i2s_mask|i2s_clk     FD1P3AX     Q       led_lat_needed        0.775       0.702
+header[2]             i2s_mask|i2s_clk     FD1P3DX     Q       header[2]             0.832       0.758
+header[3]             i2s_mask|i2s_clk     FD1P3DX     Q       header[3]             0.832       0.758
+header[0]             i2s_mask|i2s_clk     FD1P3DX     Q       header[0]             0.843       0.769
+header[1]             i2s_mask|i2s_clk     FD1P3DX     Q       header[1]             0.843       0.769
+last_bit_index[0]     i2s_mask|i2s_clk     FD1S3DX     Q       last_bit_index[0]     0.775       1.269
+num_modules_y[1]      i2s_mask|i2s_clk     FD1P3AX     Q       num_modules_y[1]      0.854       1.348
+======================================================================================================
+
+
+Ending Points with Worst Slack
+******************************
+
+                          Starting                                                     Required          
+Instance                  Reference            Type         Pin     Net                Time         Slack
+                          Clock                                                                          
+---------------------------------------------------------------------------------------------------------
+led_lat_0io               i2s_mask|i2s_clk     OFS1P3DX     SP      reading_header     0.330        0.584
+row_num_0io[5]            i2s_mask|i2s_clk     OFS1P3DX     D       header[5]          0.074        0.606
+row_num_0io[4]            i2s_mask|i2s_clk     OFS1P3DX     D       header[4]          0.074        0.657
+led_lat_0io               i2s_mask|i2s_clk     OFS1P3DX     D       led_lat_needed     0.074        0.702
+num_modules_x[2]          i2s_mask|i2s_clk     FD1P3AX      D       header[2]          0.074        0.758
+num_modules_x[3]          i2s_mask|i2s_clk     FD1P3AX      D       header[3]          0.074        0.758
+num_modules_x_2_rep1      i2s_mask|i2s_clk     FD1P3AX      D       header[2]          0.074        0.758
+num_modules_x_3_rep1      i2s_mask|i2s_clk     FD1P3AX      D       header[3]          0.074        0.758
+num_modules_x_fast[2]     i2s_mask|i2s_clk     FD1P3AX      D       header[2]          0.074        0.758
+num_modules_x_fast[3]     i2s_mask|i2s_clk     FD1P3AX      D       header[3]          0.074        0.758
+=========================================================================================================
+
+
+
+Worst Path Information
+***********************
+
+
+Path information for path number 1: 
+    Propagation time:                        0.914
+    + Clock delay at starting point:         0.000 (ideal)
+    - Requested Period:                      0.000
+    - Hold time:                             0.330
+    - Clock delay at ending point:           0.000 (ideal)
+    = Slack (critical) :                     0.584
+
+    Number of logic level(s):                0
+    Starting point:                          reading_header / Q
+    Ending point:                            led_lat_0io / SP
+    The start point is clocked by            i2s_mask|i2s_clk [rising] on pin CK
+    The end   point is clocked by            i2s_mask|i2s_clk [rising] on pin SCLK
+
+Instance / Net                  Pin      Pin               Arrival     No. of    
+Name               Type         Name     Dir     Delay     Time        Fan Out(s)
+---------------------------------------------------------------------------------
+reading_header     FD1S3BX      Q        Out     0.914     0.914       -         
+reading_header     Net          -        -       -         -           27        
+led_lat_0io        OFS1P3DX     SP       In      0.000     0.914       -         
+=================================================================================
+
+
+
+##### END OF TIMING REPORT #####]
+

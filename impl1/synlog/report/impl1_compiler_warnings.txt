@@ -1,3 +1,8 @@
-@W: CG136 :"C:\Users\Francois Campbell\GoogleDrive\Electronics\LatticeDiamond\i2s_mask\i2s_mask.v":31:2:31:3|Edge and condition mismatch
 @W: CL271 :"C:\Users\Francois Campbell\GoogleDrive\Electronics\LatticeDiamond\i2s_mask\i2s_mask.v":30:1:30:6|Pruning bits 15 to 6 of header[15:0] -- not in use ...
+@W: CL113 :"C:\Users\Francois Campbell\GoogleDrive\Electronics\LatticeDiamond\i2s_mask\i2s_mask.v":30:1:30:6|Feedback mux created for signal led_oe.
+@W: CL251 :"C:\Users\Francois Campbell\GoogleDrive\Electronics\LatticeDiamond\i2s_mask\i2s_mask.v":30:1:30:6|All reachable assignments to led_oe assign 1, register removed by optimization
+@W: CL190 :"C:\Users\Francois Campbell\GoogleDrive\Electronics\LatticeDiamond\i2s_mask\i2s_mask.v":30:1:30:6|Optimizing register bit first_bit_index[0] to a constant 0
+@W: CL190 :"C:\Users\Francois Campbell\GoogleDrive\Electronics\LatticeDiamond\i2s_mask\i2s_mask.v":30:1:30:6|Optimizing register bit first_bit_index[1] to a constant 0
+@W: CL279 :"C:\Users\Francois Campbell\GoogleDrive\Electronics\LatticeDiamond\i2s_mask\i2s_mask.v":30:1:30:6|Pruning register bits 1 to 0 of first_bit_index[11:0] 
+@W: CL279 :"C:\Users\Francois Campbell\GoogleDrive\Electronics\LatticeDiamond\i2s_mask\i2s_mask.v":30:1:30:6|Pruning register bits 3 to 1 of last_bit_index[11:0] 
 

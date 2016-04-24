@@ -1,0 +1,16 @@
+#Start recording tcl command: 4/23/2016 16:06:10
+#Project Location: C:/Users/Francois Campbell/GoogleDrive/Electronics/LatticeDiamond/i2s_mask; Project name: i2s_mask
+prj_project new -name "i2s_mask" -impl "impl1" -dev LCMXO2-7000HC-4TG144C -synthesis "lse"
+prj_project save
+prj_src add "C:/Users/Francois Campbell/GoogleDrive/Electronics/LatticeDiamond/i2s_mask/test.v"
+prj_src remove "C:/Users/Francois Campbell/GoogleDrive/Electronics/LatticeDiamond/i2s_mask/test.v"
+prj_src add "C:/Users/Francois Campbell/GoogleDrive/Electronics/LatticeDiamond/i2s_mask/i2s_mask.v" "C:/Users/Francois Campbell/GoogleDrive/Electronics/LatticeDiamond/i2s_mask/i2s_mask_tb.v"
+prj_src syn_sim -src "C:/Users/Francois Campbell/GoogleDrive/Electronics/LatticeDiamond/i2s_mask/i2s_mask_tb.v" SimulateOnly
+prj_run Synthesis -impl impl1 -task Lattice_Synthesis
+prj_run PAR -impl impl1 -task PARTrace
+launch_synplify_prj impl1
+prj_run Synthesis -impl impl1 -task Lattice_Synthesis
+launch_synplify_prj impl1
+prj_run Synthesis -impl impl1 -task Lattice_Synthesis -forceOne
+launch_synplify_prj impl1
+#Stop recording: 4/23/2016 18:04:07

@@ -1,0 +1,2 @@
+@W: FX474 |User-specified initial value defined for some sequential elements which can prevent optimum synthesis results from being achieved. 
+@W: MT529 :"c:\users\francois campbell\googledrive\electronics\latticediamond\i2s_mask\i2s_mask.v":30:1:30:6|Found inferred clock i2s_mask|i2s_clk which controls 55 sequential elements including reading_header. This clock has no specified timing constraint which may prevent conversion of gated or generated clocks and may adversely impact design performance. 

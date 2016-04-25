@@ -10,19 +10,10 @@ module top(
 	output led_lat,
 	output led_oe
 	);
-	
-	wire i2s_clk_div4;
-	
-	clk_div div_4(
-		.clk(i2s_clk),
-		.div(8'd4),
-		.rst_n(rst_n),
-		.clk_div(i2s_clk_div4)
-		);
 		
 	i2s_mask mask(
 		.i2s_data(i2s_data),
-		.i2s_clk(i2s_clk_div4),
+		.i2s_clk(i2s_clk),
 		.addr_x(addr_x),
 		.addr_y(addr_y),
 		.rst_n(rst_n),

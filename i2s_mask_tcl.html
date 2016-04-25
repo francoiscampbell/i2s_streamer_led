@@ -26,6 +26,43 @@ launch_synplify_prj impl1
 
 
 
+<A name="pn160424175436"></A><B><U><big>pn160424175436</big></U></B>
+#Start recording tcl command: 4/24/2016 17:05:04
+#Project Location: C:/Users/Francois Campbell/GoogleDrive/Electronics/LatticeDiamond/i2s_mask; Project name: i2s_mask
+prj_project open "C:/Users/Francois Campbell/GoogleDrive/Electronics/LatticeDiamond/i2s_mask/i2s_mask.ldf"
+prj_run PAR -impl impl1 -task IOTiming
+prj_run PAR -impl impl1 -task PARTrace
+prj_dev set -part LCMXO2-256HC-4TG100C
+prj_run Map -impl impl1 -task MapTrace
+prj_dev set -part LCMXO2-640HC-4TG100C
+prj_run Map -impl impl1 -task MapTrace
+prj_run Map -impl impl1 -task MapVerilogSimFile
+prj_run Map -impl impl1 -task MapVHDLSimFile
+prj_run PAR -impl impl1 -task PARTrace
+prj_run PAR -impl impl1 -task IOTiming
+prj_src add "C:/Users/Francois Campbell/GoogleDrive/Electronics/LatticeDiamond/i2s_mask/top.v"
+prj_src add "C:/Users/Francois Campbell/GoogleDrive/Electronics/LatticeDiamond/i2s_mask/clk_div.v"
+prj_run PAR -impl impl1 -task IOTiming
+prj_run PAR -impl impl1 -task PARTrace
+prj_run Map -impl impl1 -task MapTrace
+prj_src add "C:/Users/Francois Campbell/GoogleDrive/Electronics/LatticeDiamond/i2s_mask/i2s_mask/i2s_mask.spf"
+prj_run PAR -impl impl1 -task IOTiming
+prj_run PAR -impl impl1 -task IOTiming
+prj_run Synthesis -impl impl1 -task Lattice_Synthesis
+prj_run Synthesis -impl impl1 -task Lattice_Synthesis
+prj_run Synthesis -impl impl1 -task Lattice_Synthesis
+prj_run Synthesis -impl impl1 -task Lattice_Synthesis
+prj_run PAR -impl impl1 -task IOTiming
+prj_run PAR -impl impl1 -task PARTrace
+prj_run PAR -impl impl1 -task PARTrace
+prj_run PAR -impl impl1 -task PARTrace
+prj_run PAR -impl impl1 -task PARTrace
+prj_run PAR -impl impl1 -task IOTiming
+prj_run Map -impl impl1 -task MapTrace
+#Stop recording: 4/24/2016 17:54:36
+
+
+
 <BR>
 <BR>
 <BR>
